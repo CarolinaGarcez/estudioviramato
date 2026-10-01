@@ -6,6 +6,10 @@
   const mobileQuery = window.matchMedia('(max-width: 820px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const revealItems = [...document.querySelectorAll('[data-reveal]')];
+  document.querySelectorAll('.social-links a').forEach((link, index) => {
+    const labels = ['Instagram', 'LinkedIn', 'GitHub', 'E-mail'];
+    link.setAttribute('aria-label', labels[index]);
+  });
 
   const closeMenu = (returnFocus = false) => {
     if (!toggle || !nav) return;
