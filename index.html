@@ -3,117 +3,119 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f1e8">
+  <meta name="theme-color" content="#f5eddd">
   <meta name="description" content="Vira Mato — Estúdio Criativo. Design, tecnologia e direção criativa para transformar ideias em experiências digitais.">
   <title>Vira Mato — Estúdio Criativo</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/variables.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
   <script src="./js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-header" id="topo">
-    <a class="wordmark" href="#inicio" aria-label="Vira Mato, início"><strong>VIRA MATO</strong><span>ESTÚDIO CRIATIVO</span></a>
+    <a class="wordmark" href="#inicio" aria-label="Vira Mato, início"><img width="2157" height="729" src="./assets/logos/Logo completo menu.png" alt="Vira Mato — Estúdio Criativo"></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu"><span></span><span></span></button>
     <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
-      <a href="#inicio">Início</a><a href="#projetos">Projetos</a><a href="#servicos">O que faço</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
+      <a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#servicos">Serviços</a><a href="#contato">Contato</a>
       <a class="nav-cta" href="#contato">Vamos conversar <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
   <main id="conteudo">
-    <div class="growth-line" aria-hidden="true"><span class="growth-stem"></span></div>
+    <div class="growth-line" aria-hidden="true"><svg viewBox="0 0 1200 3600" preserveAspectRatio="none"><path class="growth-path" d="M530 0 C480 180 650 270 550 430 S370 660 510 830 S790 1000 640 1170 S410 1400 560 1580 S800 1760 650 1940 S400 2160 550 2340 S790 2540 640 2720 S420 2940 560 3120 S740 3340 630 3600"/><path class="growth-leaf" d="M535 790 C660 710 735 725 770 805 C685 855 600 845 535 790Z"/><path class="growth-leaf" d="M640 1510 C525 1430 455 1445 420 1525 C500 1570 580 1560 640 1510Z"/><path class="growth-leaf" d="M565 2300 C680 2220 755 2235 790 2315 C710 2360 630 2350 565 2300Z"/><path class="growth-leaf" d="M640 3060 C525 2980 455 2995 420 3075 C500 3120 580 3110 640 3060Z"/></svg></div>
     <section class="hero section" id="inicio" aria-labelledby="hero-title">
-      <div class="hero-meta section-meta"><span>01 — IDEIA</span><span>SANTOS, SP · 2026</span></div>
+      <div class="hero-meta section-meta"><span class="section-number">01</span></div>
       <div class="hero-copy">
-        <p class="eyebrow" data-reveal="fade">Estúdio criativo independente</p>
-        <h1 id="hero-title" data-reveal="rise">Ideias em<br><em>movimento.</em></h1>
-        <p class="hero-lead" data-reveal="slide"><strong>Design, tecnologia e direção criativa para transformar ideias em experiências digitais.</strong></p>
-        <p class="hero-description">A Vira Mato é meu espaço para criar, experimentar e dar forma a projetos que começam como possibilidades e encontram um jeito de existir.</p>
-        <div class="hero-actions"><a class="text-link" href="#projetos">Ver projetos <span aria-hidden="true">↓</span></a><a class="text-link" href="#sobre">Sobre mim <span aria-hidden="true">↗</span></a></div>
+        <img class="hero-brand" src="./assets/logos/Logo completo menu.png" alt="Vira Mato — Estúdio Criativo" width="2157" height="729" fetchpriority="high" decoding="async">
+        <h1 id="hero-title" data-reveal="rise"><span>Ideias</span><em>em movimento.</em></h1>
+        <p class="hero-lead" data-reveal="slide"><strong>Design, tecnologia e direção criativa<br class="hero-copy-break"> para transformar ideias em<br class="hero-copy-break"> experiências digitais.</strong></p>
+        <div class="hero-actions"><a class="button button-dark" href="#projetos">Ver projetos <span aria-hidden="true">↓</span></a><a class="button button-outline" href="#perfil">Sobre mim <span aria-hidden="true">→</span></a></div>
       </div>
-      <div class="hero-media media-placeholder" aria-label="Espaço reservado para fotografia botânica"><span>Imagem futura · botânica</span><small>01 / 06</small></div>
+      <figure class="hero-media"><img width="2109" height="745" src="./assets/banners/hero.png" alt="Composição botânica com folhagens e porta verde da Vira Mato" fetchpriority="high" decoding="async"></figure>
       <p class="handwritten hero-note" data-reveal="tilt">mesma ideia,<br> diferentes possibilidades.</p>
+      <svg class="pink-trail" viewBox="0 0 700 240" aria-hidden="true"><path d="M8 188 C150 168 85 92 210 108 S318 196 426 145 S560 100 690 26"/></svg>
       <div class="hero-index" aria-hidden="true">VM—001</div>
     </section>
 
-    <section class="about section" id="sobre" aria-labelledby="about-title">
-      <div class="section-meta"><span>02 — SOBRE</span><span>CRIAR RAIZ</span></div>
+    <section class="about section paper-section" id="sobre" aria-labelledby="about-title">
+      <div class="section-meta"><span><span class="section-number">02</span> · SOBRE</span></div>
       <div class="about-composition">
-        <div class="about-leaves media-placeholder" aria-label="Espaço reservado para fotografia de folhas"><span>Imagem futura · folhas</span></div>
         <div class="about-copy" data-reveal="rise">
-          <p class="eyebrow">Um lugar para experimentar</p>
-          <h2 id="about-title">Um espaço para ideias criarem <em>raiz.</em></h2>
+          <h2 id="about-title">Um espaço para<br>ideias criarem <em>raiz.</em></h2>
           <p class="lead"><strong>A Vira Mato é meu espaço criativo, onde design, tecnologia e direção criativa se encontram.</strong></p>
           <p>Ela nasceu da vontade de ter um lugar para experimentar, desenvolver projetos, testar possibilidades e transformar ideias em experiências reais.</p>
           <p>Mais do que mostrar trabalhos prontos, quero mostrar também o que existe entre a ideia e o resultado: <strong>processo, escolhas, tentativas, aprendizados e evolução.</strong></p>
         </div>
-        <div class="about-sprout media-placeholder" aria-label="Espaço reservado para fotografia de broto e raiz"><span>Imagem futura · broto / raiz</span></div>
-        <p class="handwritten about-note">processo também<br>é progresso.</p>
-        <p class="margin-note">ideia <span>→</span> raiz <span>→</span> broto</p>
+        <figure class="about-sprout"><img width="1430" height="1100" src="./assets/Referencias fotos/raizes.png" alt="Raízes e broto em fotografia botânica" loading="lazy" decoding="async"></figure>
       </div>
       <p class="about-quote handwritten" data-reveal="tilt">algumas ideias crescem. outras mudam de caminho. e tudo bem.</p>
     </section>
 
     <section class="projects section" id="projetos" aria-labelledby="projects-title">
-      <div class="section-meta"><span>03 — PROJETOS</span><span>ESTUDOS EM MOVIMENTO</span></div>
-      <div class="section-intro"><div><p class="eyebrow">Ideia encontra forma</p><h2 id="projects-title">Projetos que<br>ganham <em>forma.</em></h2></div><div class="intro-aside"><p><strong>Projetos onde exploro diferentes maneiras de unir ideia, estrutura, design e tecnologia.</strong></p><p>Cada um nasceu de um contexto diferente — e encontrou seu próprio caminho.</p></div></div>
+      <div class="section-meta"><span><span class="section-number">03</span> · PROJETOS</span></div>
+      <div class="project-heading"><div><h2 id="projects-title">Projetos que<br>ganham <em>forma.</em></h2><p class="projects-intro">Projetos onde exploro diferentes maneiras de unir ideia, estrutura, design e tecnologia. Cada um nasceu de um contexto diferente — e encontrou seu próprio caminho.</p></div><p class="handwritten project-aside">diferentes ideias.<br>diferentes caminhos.</p></div>
       <div class="project-list">
         <article class="project project-one" data-reveal="slide">
-          <div class="project-media media-placeholder"><span>Imagem futura · Site Rubi</span><small>01</small></div>
-          <div class="project-copy"><p class="eyebrow">Projeto 01 / Web</p><h3>Site Rubi</h3><p>Uma apresentação digital construída para comunicar a marca, seus serviços e sua identidade de forma clara e visual.</p><ul class="tag-list" aria-label="Tecnologias e disciplinas"><li>Web Design</li><li>Front-end</li><li>Site Institucional</li></ul><a class="text-link" href="#contato">Ver projeto <span aria-hidden="true">↗</span></a></div>
+          <div class="project-media"><img width="1545" height="370" src="./assets/Projetos/rubiatimes.png" alt="Mockup do projeto Rubia Times" loading="lazy" decoding="async"></div>
+          <div class="project-copy"><h3>Rubia Times</h3><p>Porque algumas histórias não cabem em um cartão de aniversário. Então eu fiz um jornal inteiro.</p><ul class="tag-list" aria-label="Tecnologias e disciplinas"><li>Web Design</li><li>Front-end</li><li>Criação de Conteúdo</li></ul><a class="text-link" href="#contato">Ver projeto <span aria-hidden="true">↗</span></a></div>
         </article>
         <article class="project project-two" data-reveal="rise">
-          <div class="project-media media-placeholder"><span>Imagem futura · Site Equilibrium</span><small>02</small></div>
-          <div class="project-copy"><p class="eyebrow">Projeto 02 / Digital</p><h3>Site Equilibrium</h3><p>Um projeto pensado para organizar informação e transformar conteúdo em uma experiência digital simples, funcional e coerente.</p><ul class="tag-list" aria-label="Tecnologias e disciplinas"><li>Web Design</li><li>UI</li><li>Front-end</li></ul><a class="text-link" href="#contato">Ver projeto <span aria-hidden="true">↗</span></a></div>
+          <div class="project-media"><img width="1232" height="586" src="./assets/Projetos/equilibrivm.webp" alt="Mockup do projeto Equilibrivm Experience" loading="lazy" decoding="async"></div>
+          <div class="project-copy"><h3>Equilibrivm Experience</h3><p>Uma experiência digital inspirada na expectativa pela chegada da turnê do álbum Equilibrivm, da cantora Anitta.</p><ul class="tag-list" aria-label="Tecnologias e disciplinas"><li>Web Design</li><li>UI</li><li>Front-end</li></ul><a class="text-link" href="#contato">Ver projeto <span aria-hidden="true">↗</span></a></div>
         </article>
         <article class="project project-three" data-reveal="tilt">
-          <div class="project-media media-placeholder"><span>Imagem futura · Jogo da Memória</span><small>03</small></div>
-          <div class="project-copy"><p class="eyebrow">Projeto 03 / Experimento</p><h3>Jogo da Memória</h3><p>Um experimento front-end criado para trabalhar lógica, interação e experiência de usuário através de um jogo para web.</p><ul class="tag-list" aria-label="Tecnologias e disciplinas"><li>JavaScript</li><li>Front-end</li><li>Interação</li></ul><a class="text-link" href="#contato">Ver projeto <span aria-hidden="true">↗</span></a></div>
+          <div class="project-media"><img width="1913" height="902" src="./assets/Projetos/keep.going().webp" alt="Mockup do projeto interativo Keep Going" loading="lazy" decoding="async"></div>
+          <div class="project-copy"><h3>Keep Going</h3><p>Uma pequena pausa digital para te lembrar de continuar. Projeto interativo.</p><ul class="tag-list" aria-label="Tecnologias e disciplinas"><li>JavaScript</li><li>Front-end</li><li>Interação</li><li>UX, UI e conteúdo</li></ul><a class="text-link" href="#contato">Ver projeto <span aria-hidden="true">↗</span></a></div>
         </article>
       </div>
-      <div class="projects-end"><p class="handwritten">Em constante movimento.</p><p>Novos estudos, experimentos e projetos vão criando raiz por aqui.</p><a class="text-link" href="#contato">Ver todos os projetos <span aria-hidden="true">→</span></a></div>
+      <div class="projects-end"><p class="handwritten">Em constante movimento.</p><p>Novos estudos, experimentos e projetos vão criando raiz por aqui.</p><span class="text-link disabled-link" aria-disabled="true">Ver todos os projetos <span aria-hidden="true">→</span></span></div>
     </section>
 
-    <section class="services section" id="servicos" aria-labelledby="services-title">
-      <div class="section-meta"><span>04 — O QUE FAÇO</span><span>IDEIA EM AÇÃO</span></div>
-      <div class="services-heading"><p class="eyebrow">Entre intenção e experiência</p><h2 id="services-title">O que ganha forma<br>por <em>aqui.</em></h2><p class="lead"><strong>Trabalho entre design e tecnologia para transformar ideias em experiências digitais com intenção, estrutura e identidade.</strong></p></div>
+    <section class="services section paper-section" id="servicos" aria-labelledby="services-title">
+      <div class="section-meta"><span><span class="section-number">04</span> · O QUE FAÇO</span></div>
+      <div class="services-heading"><h2 id="services-title">O que ganha<br>forma por <em>aqui.</em></h2><p class="lead">Trabalho entre design e tecnologia para transformar ideias em experiências digitais com intenção, estrutura e identidade.</p></div>
       <div class="service-list">
-        <article class="service-item" data-reveal="slide"><span class="service-number">01</span><div><h3>Sites &amp; Landing Pages</h3><p>Design e desenvolvimento de experiências para web, da organização da informação à interface funcionando.</p><ul class="tag-list"><li>Web Design</li><li>UI</li><li>Front-end</li></ul></div><span class="service-mark" aria-hidden="true">↗</span></article>
-        <article class="service-item" data-reveal="slide"><span class="service-number">02</span><div><h3>Design &amp; Produto Digital</h3><p>Interfaces, sistemas e experiências pensadas para facilitar a relação entre pessoas e produtos digitais.</p><ul class="tag-list"><li>Produto</li><li>UX/UI</li><li>Design System</li></ul></div><span class="service-mark" aria-hidden="true">↗</span></article>
-        <article class="service-item" data-reveal="slide"><span class="service-number">03</span><div><h3>Direção Criativa</h3><p>Construção de linguagem visual e direção aplicada a projetos digitais, mantendo conceito, identidade e comunicação trabalhando juntos.</p><ul class="tag-list"><li>Direção de Arte</li><li>Identidade</li><li>Digital</li></ul></div><span class="service-mark" aria-hidden="true">↗</span></article>
+        <article class="service-item" data-reveal="slide"><span class="service-number">01</span><div><h3>Sites &amp; Landing Pages</h3><p>Design e desenvolvimento de experiências para web, da organização da informação à interface funcionando.</p><ul class="tag-list"><li>Web Design</li><li>UI</li><li>Front-end</li></ul></div></article>
+        <article class="service-item" data-reveal="slide"><span class="service-number">02</span><div><h3>Design &amp; Produto Digital</h3><p>Interfaces, sistemas e experiências pensadas para facilitar a relação entre pessoas e produtos digitais.</p><ul class="tag-list"><li>Produto</li><li>UX/UI</li><li>Design System</li></ul></div></article>
+        <article class="service-item" data-reveal="slide"><span class="service-number">03</span><div><h3>Direção Criativa</h3><p>Construção de linguagem visual e direção aplicada a projetos digitais, mantendo conceito, identidade e comunicação trabalhando juntos.</p><ul class="tag-list"><li>Direção de Arte</li><li>Identidade</li><li>Digital</li></ul></div></article>
       </div>
-      <p class="handwritten service-note">ideia boa não precisa caber em uma caixinha.</p>
-      <a class="text-link service-cta" href="#contato">Tem algo diferente em mente? Vamos conversar. <span aria-hidden="true">→</span></a>
+      <p class="handwritten service-note" data-reveal="tilt">ideia boa não precisa caber em uma caixinha.</p>
+      <a class="button button-dark service-cta" href="#contato">Tem algo diferente em mente? Vamos conversar. <span aria-hidden="true">→</span></a>
     </section>
 
-    <section class="profile section" id="perfil" aria-labelledby="profile-title">
-      <div class="section-meta"><span>05 — QUEM ESTÁ POR TRÁS</span><span>FEITO POR UMA PESSOA</span></div>
+    <section class="profile section paper-section" id="perfil" aria-labelledby="profile-title">
+      <div class="section-meta"><span><span class="section-number">05</span> · QUEM ESTÁ POR TRÁS</span></div>
       <div class="profile-layout">
-        <div class="profile-media media-placeholder" aria-label="Espaço reservado para fotografia de Carolina"><span>Imagem futura · Carolina</span><small>CAROLINA GARCEZ</small></div>
-        <div class="profile-copy"><p class="eyebrow">Oi, prazer</p><h2 id="profile-title">Oi, eu sou<br>a <em>Carol.</em></h2>
+        <figure class="profile-media"><img width="516" height="506" src="./assets/time/Carol.png" alt="Carolina Garcez" loading="lazy" decoding="async"></figure>
+        <div class="profile-copy"><h2 id="profile-title">Oi, eu sou<br>a <em>Carol.</em></h2>
           <p class="lead"><strong>Sou designer de produto digital, desenvolvedora front-end e trabalho também com direção de arte.</strong></p>
-          <p>Gosto de entender como uma ideia funciona antes de decidir como ela deve parecer. Por isso, meu processo costuma passar por pesquisa, organização, design e tecnologia até chegar a algo que possa realmente ser usado.</p>
           <p>Criei a Vira Mato para reunir essas partes do meu trabalho em um mesmo lugar: <strong>meus projetos, experimentos, processos e tudo aquilo que ainda estou aprendendo e construindo.</strong></p>
           <p>É meu portfólio, meu laboratório e um espaço para ideias crescerem.</p>
           <p class="signature"><strong>Carolina Garcez</strong><span>Produto Digital · Front-end · Direção de Arte</span></p>
           <div class="profile-links"><a class="text-link" href="https://www.linkedin.com/">LinkedIn <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/">GitHub <span aria-hidden="true">↗</span></a></div>
         </div>
-        <p class="handwritten profile-note">sim, eu também fiz esse site. :)</p>
+        <p class="handwritten profile-note" data-reveal="tilt">sim, eu também fiz esse site. :)</p>
       </div>
     </section>
 
     <section class="contact section" id="contato" aria-labelledby="contact-title">
-      <div class="section-meta"><span>06 — CONTATO</span><span>CAMINHO ABERTO</span></div>
-      <div class="contact-layout"><div class="contact-copy"><p class="eyebrow">Uma ideia começa por uma conversa</p><h2 id="contact-title">Tem uma ideia<br><em>por aí?</em></h2>
-        <p class="lead"><strong>Pode ser um projeto, uma parceria, uma oportunidade ou simplesmente uma boa conversa.</strong></p><p>Se alguma coisa começou a criar raiz,</p><p class="door-line">a porta está aberta.</p><a class="text-link contact-cta" href="mailto:oi@viramato.studio">Vamos conversar <span aria-hidden="true">→</span></a>
-        <p class="handwritten contact-note">vai que cria raiz?</p>
+      <div class="section-meta"><span><span class="section-number">06</span> · CONTATO</span></div>
+      <div class="contact-layout"><div class="contact-copy"><h2 id="contact-title">Tem uma ideia<br><em>por aí?</em></h2>
+        <p class="lead"><strong>Pode ser um projeto, uma parceria, uma oportunidade ou simplesmente uma boa conversa.</strong></p><p>Se alguma coisa começou a criar raiz,</p><p class="door-line">a porta está aberta.</p><a class="button button-light contact-cta" href="mailto:oi@viramato.studio">Vamos conversar <span aria-hidden="true">→</span></a>
+        <p class="handwritten contact-note" data-reveal="tilt">vai que cria raiz?</p>
       </div>
-      <div class="door-scene" data-door><div class="door-media media-placeholder"><span>Imagem futura — porta</span></div><div class="door-reveal"><p>Entre.</p><h3>Continua crescendo.</h3></div></div></div>
+      </div>
+      <div class="door-interaction" aria-label="Porta para continuar a experiência">
+        <button class="door-trigger" type="button" aria-label="Abrir a porta e continuar a experiência" aria-expanded="false" aria-controls="door-reveal"></button>
+        <div class="door-reveal" id="door-reveal"><p>Continua crescendo.</p><a class="door-entry" href="mailto:oi@viramato.studio">Entre <span aria-hidden="true">→</span></a></div>
+      </div>
       <nav class="social-links" aria-label="Redes sociais"><a href="https://instagram.com/">Instagram <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/">GitHub <span aria-hidden="true">↗</span></a><a href="mailto:oi@viramato.studio">E-mail <span aria-hidden="true">↗</span></a></nav>
+      <footer class="site-footer"><img width="2157" height="729" src="./assets/logos/Logo brush completo footer.png" alt="Vira Mato — Estúdio Criativo" loading="lazy" decoding="async"><p>Ideias em movimento.</p><small>Santos — SP · 2026 · Carolina Garcez</small></footer>
     </section>
   </main>
-  <footer class="site-footer"><a class="wordmark footer-mark" href="#inicio"><strong>VIRA MATO</strong><span>ESTÚDIO CRIATIVO</span></a><p>Ideias em movimento.</p><small>Carolina Garcez · Santos — SP · 2026</small></footer>
 </body>
 </html>

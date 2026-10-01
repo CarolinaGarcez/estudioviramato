@@ -1,38 +1,24 @@
-/* Provisional placeholders only. Replace with approved brand tokens later. */
 :root {
-    /* Colors — provisional neutral fallbacks */
-    --color-background: #f4f1e8;
-    --color-surface: #e9e6dc;
-    --color-text: #262722;
-    --color-primary: #244936;
-    --color-secondary: #77796d;
-    --color-accent: #df4b78;
-    --color-rule: rgb(38 39 34 / 22%);
-
-    /* Typography — system stacks until brand fonts are provided */
-    --font-display: Georgia, 'Times New Roman', serif;
-    --font-body: Arial, Helvetica, sans-serif;
-    --font-handwritten: 'Caveat', 'Comic Sans MS', cursive;
-
-    /* Spacing — provisional scale */
-    --space-1: 0.25rem;
-    --space-2: 0.5rem;
-    --space-3: 0.75rem;
-    --space-4: 1rem;
-    --space-6: 1.5rem;
-    --space-8: 2rem;
-    --space-12: 3rem;
-    --space-16: 4rem;
-
-    /* Shape and elevation — provisional */
-    --radius-small: 0.1rem;
-    --radius-medium: 0.2rem;
-    --radius-large: 0.35rem;
-    --shadow-soft: none;
-
-    /* Layout and motion — provisional */
-    --container-width: 78rem;
-    --container-gutter: clamp(1rem, 4vw, 2rem);
-    --transition-standard: 180ms ease;
-    --growth-progress: 0;
+  --color-background: #f5eddd;
+  --color-paper: #fbf4e8;
+  --color-text: #101b15;
+  --color-primary: #08271c;
+  --color-secondary: #51544b;
+  --color-accent: #ef1688;
+  --color-rule: rgb(16 27 21 / 24%);
+  --font-interface: 'Space Grotesk', sans-serif;
+  --font-editorial: 'Young Serif', serif;
+  --font-handwritten: 'Caveat', cursive;
+  --container-width: 96rem;
+  --container-gutter: clamp(1.1rem, 4vw, 3.5rem);
+  --transition-standard: 220ms ease;
+  --growth-progress: .035;
+  --growth-path-length: 5000;
+  --hero-drift: 0px;
+  --sprout-drift: 0px;
+  --profile-drift: 0px;
+  --leaf-one: 0;
+  --leaf-two: 0;
+  --leaf-three: 0;
+  --leaf-four: 0;
 }

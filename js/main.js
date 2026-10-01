@@ -1,10 +1,11 @@
 (() => {
   const root = document.documentElement;
+  const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#site-nav');
-  const mobileQuery = window.matchMedia('(max-width: 680px)');
-
-  root.classList.add('js-ready');
+  const mobileQuery = window.matchMedia('(max-width: 820px)');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const revealItems = [...document.querySelectorAll('[data-reveal]')];
 
   const closeMenu = (returnFocus = false) => {
     if (!toggle || !nav) return;
@@ -16,86 +17,88 @@
 
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
-      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!isOpen));
-      toggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
-      nav.classList.toggle('is-open', !isOpen);
-      if (!isOpen && mobileQuery.matches) nav.querySelector('a')?.focus();
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      toggle.setAttribute('aria-label', open ? 'Abrir menu' : 'Fechar menu');
+      nav.classList.toggle('is-open', !open);
+      if (!open && mobileQuery.matches) nav.querySelector('a')?.focus();
     });
-
     nav.addEventListener('click', (event) => {
       if (event.target.closest('a') && mobileQuery.matches) closeMenu();
     });
-
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') closeMenu(true);
       if (event.key === 'Tab' && toggle.getAttribute('aria-expanded') === 'true' && mobileQuery.matches) {
         const links = [...nav.querySelectorAll('a')];
-        const first = links[0];
-        const last = links.at(-1);
-        if (event.shiftKey && document.activeElement === first) {
+        if (event.shiftKey && document.activeElement === links[0]) {
           event.preventDefault();
           toggle.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
+        } else if (!event.shiftKey && document.activeElement === links.at(-1)) {
           event.preventDefault();
           toggle.focus();
         }
       }
     });
-
     mobileQuery.addEventListener('change', () => closeMenu());
   }
 
-  const revealItems = document.querySelectorAll('[data-reveal]');
-  const door = document.querySelector('[data-door]');
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-  if ('IntersectionObserver' in window && !reducedMotion.matches) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
-    revealItems.forEach((item) => revealObserver.observe(item));
-
-    if (door) {
-      const doorObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            door.classList.add('is-visible');
-            observer.unobserve(door);
-          }
-        });
-      }, { threshold: 0.2 });
-      doorObserver.observe(door);
-    }
-  } else {
+  if (reducedMotion.matches || !('IntersectionObserver' in window)) {
     revealItems.forEach((item) => item.classList.add('is-visible'));
-    door?.classList.add('is-visible');
+  } else if (revealItems.length) {
+    root.classList.add('js-ready');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -3% 0px' });
+    revealItems.forEach((item) => observer.observe(item));
+  }
+
+  const growthPath = document.querySelector('.growth-path');
+  const growthLength = growthPath?.getTotalLength();
+  if (growthLength) root.style.setProperty('--growth-path-length', growthLength.toFixed(2));
+
+  const door = document.querySelector('.door-interaction');
+  const doorTrigger = door?.querySelector('.door-trigger');
+  const setDoorOpen = (open, returnFocus = false) => {
+    door?.classList.toggle('is-open', open);
+    doorTrigger?.setAttribute('aria-expanded', String(open));
+    if (returnFocus) doorTrigger?.focus();
+  };
+  if (door && doorTrigger) {
+    if (reducedMotion.matches) setDoorOpen(true);
+    doorTrigger.addEventListener('click', () => setDoorOpen(!door.classList.contains('is-open')));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && door.classList.contains('is-open')) setDoorOpen(false, true);
+    });
   }
 
   let ticking = false;
-  const updateGrowth = () => {
+  const updateScroll = () => {
     const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     const progress = Math.min(1, Math.max(0, window.scrollY / maxScroll));
-    root.style.setProperty('--growth-progress', progress.toFixed(4));
-    if (door && door.classList.contains('is-visible')) {
-      door.classList.toggle('is-opening', progress > 0.82);
-    }
+    const growth = reducedMotion.matches ? 1 : .035 + progress * .965;
+    root.style.setProperty('--growth-progress', growth.toFixed(4));
+    root.style.setProperty('--hero-drift', reducedMotion.matches ? '0px' : `${(-progress * 3).toFixed(1)}px`);
+    root.style.setProperty('--sprout-drift', reducedMotion.matches ? '0px' : `${(-progress * 7).toFixed(1)}px`);
+    root.style.setProperty('--profile-drift', reducedMotion.matches ? '0px' : `${(-progress * 5).toFixed(1)}px`);
+    root.style.setProperty('--leaf-one', reducedMotion.matches || growth > .14 ? '.62' : '0');
+    root.style.setProperty('--leaf-two', reducedMotion.matches || growth > .37 ? '.62' : '0');
+    root.style.setProperty('--leaf-three', reducedMotion.matches || growth > .6 ? '.62' : '0');
+    root.style.setProperty('--leaf-four', reducedMotion.matches || growth > .82 ? '.62' : '0');
+    header?.classList.toggle('is-scrolled', window.scrollY > 24);
     ticking = false;
   };
-
-  const requestGrowthUpdate = () => {
+  const requestScrollUpdate = () => {
     if (!ticking) {
-      window.requestAnimationFrame(updateGrowth);
+      requestAnimationFrame(updateScroll);
       ticking = true;
     }
   };
-
-  window.addEventListener('scroll', requestGrowthUpdate, { passive: true });
-  window.addEventListener('resize', requestGrowthUpdate, { passive: true });
-  updateGrowth();
+  window.addEventListener('scroll', requestScrollUpdate, { passive: true });
+  window.addEventListener('resize', requestScrollUpdate, { passive: true });
+  reducedMotion.addEventListener('change', requestScrollUpdate);
+  updateScroll();
 })();
