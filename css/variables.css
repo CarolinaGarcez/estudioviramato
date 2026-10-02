@@ -12,13 +12,6 @@
   --container-width: 96rem;
   --container-gutter: clamp(1.1rem, 4vw, 3.5rem);
   --transition-standard: 220ms ease;
-  --growth-progress: .035;
-  --growth-path-length: 5000;
   --hero-drift: 0px;
   --sprout-drift: 0px;
-  --profile-drift: 0px;
-  --leaf-one: 0;
-  --leaf-two: 0;
-  --leaf-three: 0;
-  --leaf-four: 0;
 }

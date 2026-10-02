@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" type="image/webp" href="img/icone.webp">
+  <title>Carol Garcez - PortfÃ³lio</title>
+  <meta name="description"
+    content="PortfÃ³lio de Carolina Garcez, Desenvolvedora Front-End em formaÃ§Ã£o, focada em criar interfaces web modernas e responsivas." />
+  <meta property="og:title" content="Carol Garcez - PortfÃ³lio" />
+  <meta property="og:description" content="PortfÃ³lio de Carolina Garcez, Desenvolvedora Front-End em formaÃ§Ã£o." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://carolinagarcez.github.io/portfolio/img/projetos/port.webp" />
+
+  <!-- Ãcones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- Fonte Manrope e Caveat (Logo) -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+  <!-- CSS consolidado e minificado -->
+  <link href="assets/css/style.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- BotÃ£o de alternar tema -->
+  <button id="toggle-theme" class="theme-toggle-btn" aria-label="Alternar tema escuro e claro" title="Alternar tema escuro e claro">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <!-- Redes sociais fixadas Ã  esquerda -->
+  <ul class="example-2">
+    <li class="icon-content">
+      <a data-social="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/carolinagarcez" target="_blank" rel="noopener noreferrer">
+        <div class="filled"></div>
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <div class="tooltip">LinkedIn</div>
+    </li>
+    <li class="icon-content">
+      <a data-social="github" aria-label="GitHub" href="https://github.com/CarolinaGarcez" target="_blank" rel="noopener noreferrer">
+        <div class="filled"></div>
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <div class="tooltip">GitHub</div>
+    </li>
+    <li class="icon-content">
+      <a data-social="instagram" aria-label="Instagram" href="https://www.instagram.com/mariacarolina.g.a/" target="_blank" rel="noopener noreferrer">
+        <div class="filled"></div>
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <div class="tooltip">Instagram</div>
+    </li>
+  </ul>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html" class="logo-link" aria-label="Carol Dev Home">
+        <!-- SVG Flower Logo inline -->
+        <svg viewBox="0 0 100 100" class="logo-flower" xmlns="http://www.w3.org/2000/svg">
+          <!-- Stem & Leaves -->
+          <path d="M50,70 L50,90 Q50,95 48,98" stroke="#2E8B57" stroke-width="3" stroke-linecap="round" fill="none" />
+          <path d="M50,82 Q42,80 38,84 Q43,89 50,86 Z" fill="#2E8B57" />
+          <path d="M50,77 Q58,74 62,78 Q57,84 50,81 Z" fill="#2E8B57" />
+          <!-- Petals -->
+          <circle cx="50" cy="34" r="11" fill="var(--card-bg)" stroke="#FA7272" stroke-width="2.5" />
+          <circle cx="64" cy="44" r="11" fill="var(--card-bg)" stroke="#FA7272" stroke-width="2.5" />
+          <circle cx="58" cy="61" r="11" fill="var(--card-bg)" stroke="#FA7272" stroke-width="2.5" />
+          <circle cx="42" cy="61" r="11" fill="var(--card-bg)" stroke="#FA7272" stroke-width="2.5" />
+          <circle cx="36" cy="44" r="11" fill="var(--card-bg)" stroke="#FA7272" stroke-width="2.5" />
+          <!-- Center Core -->
+          <circle cx="50" cy="49" r="14" fill="var(--card-bg)" stroke="#FA7272" stroke-width="2.5" />
+          <!-- Code bracket text -->
+          <text x="50" y="53.5" font-family="'Manrope', sans-serif" font-weight="700" font-size="10.5" fill="#2E8B57" text-anchor="middle">&lt;/&gt;</text>
+          <!-- Stars -->
+          <path d="M69,25 Q71,27 73,27 Q71,27 69,29 Q69,27 67,27 Q69,27 69,25 Z" fill="#FA7272" />
+          <path d="M28,32 Q29.5,33.5 31,33.5 Q29.5,33.5 28,35 Q28,33.5 26.5,33.5 Q28,33.5 28,32 Z" fill="#FA7272" />
+        </svg>
+        <div class="logo-text">
+          <span class="carol">Carol</span>
+          <span class="dev">Dev</span>
+        </div>
+      </a>
+    </div>
+
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="cvs/cv-carolinagarcez-ti.pdf" download>CurrÃ­culo</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menu hambÃºrguer (mobile) -->
+    <div class="bars" aria-label="Abrir menu de navegaÃ§Ã£o" role="button">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO (Redesenhada) -->
+    <section class="hero">
+      <!-- Decorativos de fundo em SVG -->
+      <div class="hero-bg-dots"></div>
+      
+      <!-- Linha curva tracejada com folha na ponta -->
+      <svg class="hero-bg-curve" viewBox="0 0 1200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M -50,60 Q 250,110 550,50 T 1150,80" stroke="#2E8B57" stroke-width="2" stroke-dasharray="6 6" opacity="0.3" stroke-linecap="round" />
+        <path d="M 1145,75 Q 1150,70 1155,75 Q 1150,85 1145,75 Z" fill="#2E8B57" opacity="0.5" />
+      </svg>
+
+      <div class="hero_detail">
+        <h1 class="title">
+          Algumas pessoas colecionam objetos. <br>
+          <span class="hero-highlight">Eu coleciono ideias.</span>
+        </h1>
+        
+        <!-- Texto animado -->
+        <h2>
+          <span id="element"></span>
+        </h2>
+
+        <p>
+          Estudante de AnÃ¡lise e Desenvolvimento de Sistemas, com formaÃ§Ã£o tÃ©cnica em InformÃ¡tica e experiÃªncia em suporte tÃ©cnico.
+          <span class="transition-info">Front-End Developer em formaÃ§Ã£o | Explorando Product Design e UX/UI</span>
+        </p>
+
+        <!-- BotÃµes de AÃ§Ã£o -->
+        <div class="buttons">
+          <a href="#projects" class="btn-primary">Ver projetos <i class="fa-solid fa-arrow-right-long"></i></a>
+          <a href="#about" class="btn-secondary">Sobre mim <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+      </div>
+
+      <!-- Hero Ilustrativa (Foto de Perfil com Decorativos) -->
+      <div class="hero-image">
+        <div class="hero-image-wrapper">
+          <img src="img/perfila.webp" alt="Carolina Garcez, desenvolvedora Front-End em formaÃ§Ã£o" width="516" height="512" loading="eager" />
+        </div>
+        
+        <!-- Elementos flutuantes decorativos em SVG -->
+        <div class="hero-graphic-decor">
+          <!-- Brilhos / Estrelas -->
+          <svg class="hero-sparkle hero-sparkle-1" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12,0 Q13.5,10.5 24,12 Q13.5,13.5 12,24 Q10.5,13.5 0,12 Q10.5,10.5 12,0 Z" />
+          </svg>
+          <svg class="hero-sparkle hero-sparkle-2" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12,0 Q13.5,10.5 24,12 Q13.5,13.5 12,24 Q10.5,13.5 0,12 Q10.5,10.5 12,0 Z" />
+          </svg>
+          <!-- LÃ¢mpada com cÃ³digo dentro (ideias ganham vida) -->
+          <svg class="hero-lightbulb" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1 .3 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+            <line x1="9" y1="18" x2="15" y2="18" />
+            <line x1="10" y1="22" x2="14" y2="22" />
+            <!-- Code brackets inside bulb -->
+            <path d="M10 8 l-2 2 l2 2 M14 8 l2 2 l-2 2" stroke="var(--primary-color)" stroke-width="1.2" />
+          </svg>
+          <!-- Seta desenhada Ã  mÃ£o -->
+          <svg class="hero-arrow" width="80" height="40" viewBox="0 0 100 50" fill="none" stroke="#FA7272" stroke-width="2" stroke-linecap="round">
+            <path d="M10,10 Q40,40 80,20" stroke-dasharray="4 4" />
+            <path d="M72,16 L82,20 L78,30" fill="none" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section class="about" id="about">
+      <h2>Sobre mim</h2>
+
+      <div class="about-container animate-section">
+        <div class="about-content">
+          <p>Oi! Eu sou a Carol ðŸ‘‹</p>
+
+          <p>
+            Atualmente atuo com suporte tÃ©cnico e administrativo, onde desenvolvi habilidades como organizaÃ§Ã£o,
+            comunicaÃ§Ã£o e resoluÃ§Ã£o de problemas no dia a dia.
+          </p>
+
+          <p class="highlight-text">
+            Em transiÃ§Ã£o para desenvolvimento front-end, <br />
+            criando interfaces modernas com HTML, CSS e JavaScript.
+          </p>
+
+          <p>
+            Acredito na evoluÃ§Ã£o constante atravÃ©s da prÃ¡tica, por isso estou sempre desenvolvendo projetos e
+            aprimorando minhas habilidades.
+          </p>
+
+          <a href="#" class="btn-about">
+            ConheÃ§a minha trajetÃ³ria <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+
+        <!-- DIAGRAMA DO PROCESSO CRIATIVO (Mockup) -->
+        <div class="creative-process">
+          <h3>Meu Processo Criativo</h3>
+          <div class="process-flow">
+            <!-- Step 1 -->
+            <div class="process-step">
+              <div class="process-icon-wrapper" title="Ideia">
+                <!-- Nuvem de pensamento SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 0-2-2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <h4>Ideia</h4>
+              <p>Conceito e briefing</p>
+            </div>
+            
+            <!-- Arrow -->
+            <svg class="process-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+            <!-- Step 2 -->
+            <div class="process-step">
+              <div class="process-icon-wrapper" title="Design">
+                <!-- LÃ¡pis SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+              </div>
+              <h4>Design</h4>
+              <p>PrototipaÃ§Ã£o e UI/UX</p>
+            </div>
+            
+            <!-- Arrow -->
+            <svg class="process-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+            <!-- Step 3 -->
+            <div class="process-step">
+              <div class="process-icon-wrapper" title="CÃ³digo">
+                <!-- SÃ­mbolos de cÃ³digo SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h4>CÃ³digo</h4>
+              <p>Desenvolvimento limpo</p>
+            </div>
+            
+            <!-- Arrow -->
+            <svg class="process-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+            <!-- Step 4 -->
+            <div class="process-step">
+              <div class="process-icon-wrapper" title="Resultado">
+                <!-- Monitor com coraÃ§Ã£o SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                  <path d="M12 7c.5-1.5 2.5-1.5 3 0-1.5 1.5-3 3-3 3s-1.5-1.5-3-3c.5-1.5 2.5-1.5 3 0z" fill="currentColor"></path>
+                </svg>
+              </div>
+              <h4>Resultado</h4>
+              <p>ExperiÃªncia no ar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETA DIRECIONANTE -->
+    <div class="scroll-down" id="scrollBtn" role="button" aria-label="Ir para a prÃ³xima seÃ§Ã£o">
+      <i class="fa-solid fa-angles-down"></i>
+    </div>
+
+    <!-- SKILLS -->
+    <section id="skills" class="animate-section">
+      <h2>Minhas Skills</h2>
+      <p>Tecnologias e ferramentas que utilizo no meu dia a dia</p>
+
+      <h3 class="skills-subtitle">Front-end</h3>
+      <div class="skills-container">
+        <div class="skill-card">
+          <i aria-hidden="true" class="devicon-html5-plain colored"></i>
+          <span>HTML</span>
+        </div>
+        <div class="skill-card">
+          <i aria-hidden="true" class="devicon-css3-plain colored"></i>
+          <span>CSS</span>
+        </div>
+        <div class="skill-card">
+          <i aria-hidden="true" class="devicon-javascript-plain colored"></i>
+          <span>JavaScript</span>
+        </div>
+      </div>
+
+      <h3 class="skills-subtitle">Ferramentas</h3>
+      <div class="skills-container">
+        <div class="skill-card">
+          <i aria-hidden="true" class="devicon-git-plain colored"></i>
+          <span>Git</span>
+        </div>
+        <div class="skill-card">
+          <i aria-hidden="true" class="devicon-github-original"></i>
+          <span>GitHub</span>
+        </div>
+        <div class="skill-card">
+          <i aria-hidden="true" class="devicon-vscode-plain colored"></i>
+          <span>VS Code</span>
+        </div>
+      </div>
+
+      <h3 class="skills-subtitle">Outros conhecimentos</h3>
+      <div class="skills-container">
+        <div class="skill-card">
+          <i aria-hidden="true" class="fa-solid fa-screwdriver-wrench"></i>
+          <span>ManutenÃ§Ã£o de PCs</span>
+        </div>
+        <div class="skill-card">
+          <i aria-hidden="true" class="fa-solid fa-headset"></i>
+          <span>Suporte TÃ©cnico</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="projects animate-section" id="projects">
+      <div class="projects-container">
+        <h2>Ãšltimos Projetos</h2>
+
+        <div class="cards">
+          <!-- CARD 1 -->
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="img/projetos/port.webp" alt="Interface do site de portfÃ³lio pessoal desenvolvido com HTML, CSS e JavaScript" loading="lazy" width="1362" height="911">
+            </div>
+            <div class="card-content">
+              <h3>PortfÃ³lio Pessoal</h3>
+              <p>Site responsivo desenvolvido com HTML, CSS e JavaScript.</p>
+              <div class="card-badges">
+                <span class="badge badge-tech">HTML</span>
+                <span class="badge badge-tech">CSS</span>
+                <span class="badge badge-tech">JavaScript</span>
+                <span class="badge badge-design">Design</span>
+                <span class="badge badge-design">UX/UI</span>
+              </div>
+              <div class="card-links">
+                <a href="" class="card-link card-link-primary">Ver projeto <i class="fa-solid fa-arrow-right-long"></i></a>
+                <a href="https://github.com/CarolinaGarcez/portfolio" target="_blank" rel="noopener noreferrer" class="card-link"><i class="fa-brands fa-github"></i> CÃ³digo no GitHub <i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="img/projetos/memory_game.webp" alt="Interface do projeto Rick and Morty Memory Game desenvolvido com HTML, CSS e JavaScript" loading="lazy" width="1772" height="897">
+            </div>
+            <div class="card-content">
+              <h3> Jogo da MemÃ³ria</h3>
+              <p>Projeto interativo com lÃ³gica em JavaScript e foco em experiÃªncia do usuÃ¡rio.</p>
+              <div class="card-badges">
+                <span class="badge badge-tech">HTML</span>
+                <span class="badge badge-tech">CSS</span>
+                <span class="badge badge-tech">JavaScript</span>
+                <span class="badge badge-design">UX/UI</span>
+                <span class="badge badge-design">LÃ³gica</span>
+              </div>
+              <div class="card-links">
+                <a href="projects/rick-and-morty-memory-game/index.html" target="_blank" class="card-link card-link-primary">Jogue aqui ðŸŽ® <i class="fa-solid fa-arrow-right-long"></i></a>
+                <a href="https://github.com/CarolinaGarcez/memory-game-rick-morty" target="_blank" rel="noopener noreferrer" class="card-link"><i class="fa-brands fa-github"></i> CÃ³digo no GitHub <i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="img/projetos/equilibrivm.webp" alt="Interface digital Equilibrivm Experience inspirada na cantora Anitta" loading="lazy" width="1232" height="586">
+            </div>
+            <div class="card-content">
+              <h3> Equilibrivm Experience</h3>
+              <p>Uma experiÃªncia digital inspirada na expectativa pela chegada da turnÃª do Ã¡lbum Equilibrivm, da cantora Anitta.</p>
+              <div class="card-badges">
+                <span class="badge badge-tech">HTML</span>
+                <span class="badge badge-tech">CSS</span>
+                <span class="badge badge-tech">JavaScript</span>
+                <span class="badge badge-design">Branding</span>
+                <span class="badge badge-design">Design</span>
+              </div>
+              <div class="card-links">
+                <a href="projects/equilibrivm/index.html" target="_blank" class="card-link card-link-primary">Acesse aqui ðŸŽ§ <i class="fa-solid fa-arrow-right-long"></i></a>
+                <a href="https://github.com/CarolinaGarcez/equilibrivm-experience" target="_blank" rel="noopener noreferrer" class="card-link"><i class="fa-brands fa-github"></i> CÃ³digo no GitHub <i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="img/projetos/keep.going().webp" alt="Interface do projeto Keep Going que gera frases motivacionais" loading="lazy" width="1913" height="902">
+            </div>
+            <div class="card-content">
+              <h3> Keep Going Experience</h3>
+              <p>Uma pequena pausa digital para te lembrar de continuar. Projeto interativo que gera frases motivacionais a cada clique.</p>
+              <div class="card-badges">
+                <span class="badge badge-tech">HTML</span>
+                <span class="badge badge-tech">CSS</span>
+                <span class="badge badge-tech">JavaScript</span>
+                <span class="badge badge-design">UX/UI</span>
+                <span class="badge badge-design">Design</span>
+              </div>
+              <div class="card-links">
+                <a href="projects/keep-going/index.html" target="_blank" class="card-link card-link-primary">Acesse aqui ðŸŒˆ <i class="fa-solid fa-arrow-right-long"></i></a>
+                <a href="https://github.com/CarolinaGarcez/keep.going" target="_blank" rel="noopener noreferrer" class="card-link"><i class="fa-brands fa-github"></i> CÃ³digo no GitHub <i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTÃƒO FINAL -->
+        <a href="#" class="btn-projects">
+          Ver todos os projetos <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact animate-section" id="contact">
+      <div class="contact-card">
+        <h2>Vamos conversar?</h2>
+        <p>Estou aberta a oportunidades de estÃ¡gio em front-end ðŸ’¼</p>
+        <a href="mailto:mariacarolinaga@live.com" class="btn-contact"><i class="fa-solid fa-envelope"></i> Entrar em contato</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href="https://www.linkedin.com/in/carolinagarcez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i aria-hidden="true" class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/CarolinaGarcez" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i aria-hidden="true" class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/mariacarolina.g.a/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i aria-hidden="true" class="fa-brands fa-instagram"></i></a>
+        <a href="https://carolinagarcez.github.io/portfolio/" target="_blank" rel="noopener noreferrer" aria-label="PortfÃ³lio"><i aria-hidden="true" class="fa-solid fa-laptop-code"></i></a>
+      </div>
+    </div>
+
+    <div class="footerBottom">
+      <p>Site em constante evoluÃ§Ã£o</p>
+      
+      <!-- SVG Flower Logo in footer -->
+      <div class="footer-logo-wrapper">
+        <svg viewBox="0 0 100 100" class="footer-logo-flower" xmlns="http://www.w3.org/2000/svg">
+          <!-- Stem & Leaves -->
+          <path d="M50,70 L50,90 Q50,95 48,98" stroke="#2E8B57" stroke-width="3" stroke-linecap="round" fill="none" />
+          <path d="M50,82 Q42,80 38,84 Q43,89 50,86 Z" fill="#2E8B57" />
+          <path d="M50,77 Q58,74 62,78 Q57,84 50,81 Z" fill="#2E8B57" />
+          <!-- Petals -->
+          <circle cx="50" cy="34" r="11" fill="var(--card-bg)" stroke="#FA7272" stroke-width="2.5" />
+          <circle cx="64" cy="44" r="11" fill="var(--card-bg)" stroke="#FA7272" stroke-width="2.5" />
+          <circle cx="58" cy="61" r="11" fill="var(--card-bg)" stroke="#FA7272" stroke-width="2.5" />
+          <circle cx="42" cy="61" r="11" fill="var(--card-bg)" stroke="#FA7272" stroke-width="2.5" />
+          <circle cx="36" cy="44" r="11" fill="var(--card-bg)" stroke="#FA7272" stroke-width="2.5" />
+          <!-- Center Core -->
+          <circle cx="50" cy="49" r="14" fill="var(--card-bg)" stroke="#FA7272" stroke-width="2.5" />
+          <!-- Code bracket text -->
+          <text x="50" y="53.5" font-family="'Manrope', sans-serif" font-weight="700" font-size="10.5" fill="#2E8B57" text-anchor="middle">&lt;/&gt;</text>
+        </svg>
+        <div class="footer-logo-text">
+          <span class="carol">Carol</span>
+          <span class="dev">Dev</span>
+        </div>
+      </div>
+      
+      <p>Â© 2026 - Desenvolvido por <span class="designer">Carolina Garcez</span></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

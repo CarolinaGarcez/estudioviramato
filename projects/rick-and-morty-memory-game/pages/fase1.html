@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fase 1 - Dimension R-137 do Jogo da MemÃ³ria Rick and Morty. Encontre os pares de Ricks!">
+
+  <link rel="shortcut icon" href="../img/index/icon.png">
+  <title>Fase 1 - Dimension R-137 | Jogo da MemÃ³ria Rick and Morty</title>
+
+  <!-- Ãcones (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- CSS -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/componentes/cards.css" rel="stylesheet">
+  <link href="../css/pages/game.css" rel="stylesheet">
+  <link href="../css/pages/fase1.css" rel="stylesheet">
+
+  <!-- JS -->
+  <script defer src="../js/fases/fase1.js"></script>
+  <script defer src="../js/game.js"></script>
+</head>
+
+<body>
+
+  <main>
+    <header class="hud-bar">
+      <div class="hud-group">
+        <div class="hud-item hud-player"><i class="fa-solid fa-user"></i> <span class="player">Jogador</span></div>
+        <div class="hud-item"><i class="fa-solid fa-compass"></i> <span class="phase-name">Fase 1</span></div>
+      </div>
+
+      <div class="hud-group">
+        <div class="hud-item"><i class="fa-solid fa-stopwatch"></i> <span class="timer">00</span>s</div>
+        <div class="hud-item"><i class="fa-solid fa-hand-pointer"></i> <span class="moves">0</span> jogadas</div>
+        <div class="hud-item"><i class="fa-solid fa-clone"></i> <span class="matched-pairs">0</span>/<span class="total-pairs">6</span> pares</div>
+      </div>
+
+      <div class="buttons">
+        <a href="../index.html" class="back-button" aria-label="Voltar">â¬… Voltar</a>
+        <button class="reset">ðŸ”„ Reiniciar</button>
+      </div>
+    </header>
+
+    <div class="titulo">
+      <h1>Jogo da MemÃ³ria</h1>
+      <img src="../img/index/rick-and-morty.png" alt="Logo Rick and Morty">
+      <p class="subtitle"> Dimension R-137</p>
+    </div>
+
+    <div class="grid"></div>
+
+    <div class="win-screen hidden">
+      <div class="win-box">
+        <h2>WUBBA LUBBA DUB DUB! ðŸš€</h2>
+        <p class="win-text"></p>
+        <button class="next-phase">PrÃ³xima Fase</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER  -->
+  <footer>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href="https://www.linkedin.com/in/carolinagarcez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/CarolinaGarcez" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/mariacarolina.g.a/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://carolinagarcez.github.io/portfolio/" target="_blank" rel="noopener noreferrer" aria-label="PortfÃ³lio"><i class="fa-solid fa-laptop-code"></i></a>
+      </div>
+    </div>
+
+    <div class="footerBottom">
+      <img src="../img/index/meu-logo-neon.png" alt="Logo Carolina Garcez">
+      <p> Â© 2026 - Desenvolvido por <span class="designer">Carolina Garcez</span><br>
+        Projeto sem fins comerciais. Rick and Mortyâ„¢ e imagens pertencem aos seus respectivos criadores.
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+﻿/* =====================================
+   HEADER
+===================================== */
+
+.header{
+
+    /* MantÃ©m o header sempre visÃ­vel no topo da tela */
+    position: fixed;
+
+    /* Posiciona no topo */
+    top: 0;
+
+    /* Encosta na esquerda */
+    left: 0;
+
+    /* Faz o header ocupar toda a largura da tela */
+    width: 100%;
+
+    /* Cor de fundo definida pelo tema */
+    background: var(--background);
+
+    /* Cria um efeito de vidro fosco desfocando o conteÃºdo atrÃ¡s */
+    backdrop-filter: blur(16px);
+
+    /* Linha inferior para separar o header do restante da pÃ¡gina */
+    border-bottom: 1px solid var(--border);
+
+    /* MantÃ©m o header acima dos outros elementos */
+    z-index: 999;
+
+}
+
+/* Container que centraliza o conteÃºdo do header */
+.header-container{
+
+    /* Limita a largura mÃ¡xima em telas grandes */
+    max-width: 1200px;
+
+    /* Altura do header */
+    height: 80px;
+
+    /* Centraliza horizontalmente */
+    margin: auto;
+
+    /* EspaÃ§amento interno nas laterais */
+    padding: 0 32px;
+
+    /* Coloca os elementos lado a lado */
+    display: flex;
+
+    /* Logo na esquerda e menu na direita */
+    justify-content: space-between;
+
+    /* Centraliza tudo verticalmente */
+    align-items: center;
+
+}
+
+/* Ãrea da logo */
+.logo{
+
+    /* Permite alinhar facilmente imagem e textos */
+    display: flex;
+
+    /* Centraliza verticalmente */
+    align-items: center;
+
+}
+
+/* Imagem da logo */
+.logo img{
+
+    /* Largura da logo */
+    width: 250px;
+
+    /* Remove pequenos espaÃ§os que imagens inline possuem */
+    display: block;
+
+}
+
+/* Lista do menu */
+.menu{
+
+    /* Coloca os itens um ao lado do outro */
+    display: flex;
+
+    /* Centraliza verticalmente */
+    align-items: center;
+
+    /* EspaÃ§amento entre os links */
+    gap: 40px;
+
+    /* Remove as bolinhas da lista */
+    list-style: none;
+
+}
+
+/* Links do menu */
+.menu a{
+
+    /* NecessÃ¡rio para posicionar o ::after */
+    position: relative;
+
+    /* Cor padrÃ£o do texto */
+    color: var(--text-secondary);
+
+    /* Peso da fonte */
+    font-weight: 500;
+
+    /* Suaviza mudanÃ§as de cor e animaÃ§Ãµes */
+    transition: .3s;
+
+}
+
+/* Linha decorativa abaixo do link */
+.menu a::after{
+
+    /* Cria um pseudo-elemento vazio */
+    content: "";
+
+    /* Permite posicionar a linha livremente */
+    position: absolute;
+
+    /* ComeÃ§a alinhada Ã  esquerda */
+    left: 0;
+
+    /* DistÃ¢ncia abaixo do texto */
+    bottom: -8px;
+
+    /* Inicialmente invisÃ­vel */
+    width: 0;
+
+    /* Espessura da linha */
+    height: 2px;
+
+    /* Cor da linha */
+    background: var(--primary);
+
+    /* Anima o crescimento da linha */
+    transition: .3s;
+
+}
+
+/* Quando o mouse passa sobre o link */
+.menu a:hover{
+
+    /* Destaca o texto */
+    color: var(--text-primary);
+
+}
+
+/* Faz a linha crescer durante o hover */
+.menu a:hover::after{
+
+    /* Ocupa toda a largura do link */
+    width: 100%;
+
+}
+
+/* BotÃ£o do menu mobile */
+.menu-toggle{
+
+    /* Fica escondido no desktop */
+    display: none;
+
+    /* Remove a borda padrÃ£o do botÃ£o */
+    border: none;
+
+    /* Remove o fundo padrÃ£o */
+    background: none;
+
+    /* Tamanho do Ã­cone */
+    font-size: 1.4rem;
+
+    /* Cor do Ã­cone */
+    color: var(--text-primary);
+
+    /* Mostra a "mÃ£ozinha" ao passar o mouse */
+    cursor: pointer;
+
+}

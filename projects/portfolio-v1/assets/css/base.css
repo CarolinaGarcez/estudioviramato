@@ -1,0 +1,40 @@
+﻿body{
+
+    background:var(--color-bg);
+    overflow-x:hidden;
+
+}
+
+section{
+
+    padding:6rem 0;
+
+}
+
+.container{
+
+    width:min(100% - 2rem,var(--container));
+    margin-inline:auto;
+
+}
+
+::selection{
+
+    background:var(--color-primary);
+    color:white;
+
+}
+
+hr{
+
+    border:none;
+    height:1px;
+    background:var(--color-border);
+
+}
+
+.hidden{
+
+    display:none!important;
+
+}

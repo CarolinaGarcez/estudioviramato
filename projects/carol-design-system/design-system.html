@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manual da Marca e Design System de Carolina Garcez — da ideia ao produto digital.">
+  <title>Manual da Marca · Carolina Garcez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/variables.css">
+  <link rel="stylesheet" href="design-system.css">
+</head>
+<body>
+  <!-- Atalho de acessibilidade para ir direto ao conteúdo -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ========================================
+       HEADER
+       Logo, navegação, menu mobile e troca de tema
+  ========================================= -->
+  <header class="site-header">
+      <a class="brand" href="#top" aria-label="Manual da Marca Carolina Garcez — início">
+      <img src="../../assets/img/brand/logo/Logo_principal.png" alt="Carolina Garcez" width="555" height="222">
+      <span>Manual da Marca</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Abrir menu</span></button>
+    <nav class="top-nav" id="main-nav" aria-label="Navegação principal">
+      <a href="#brand">Brand</a><a href="#foundations">Foundations</a><a href="#assets">Assets</a><a href="#components">Components</a><a href="#patterns">Patterns</a><a href="#applications">Applications</a>
+      <button class="theme-toggle" type="button" aria-label="Alternar tema" title="Alternar tema"><span aria-hidden="true">◐</span></button>
+      <a class="back-link" href="../../index.html">← Voltar ao portfólio</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- ========================================
+         HERO
+         Apresentação do Manual da Marca
+    ========================================= -->
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Manual visual da marca</p>
+        <h1 id="hero-title">Ideias ganham <em>vida.</em></h1>
+        <p class="lead">Este manual reúne os princípios, elementos visuais e decisões que transformam minha identidade em uma experiência digital consistente.</p>
+        <p class="meta-line">Brand Identity <i>·</i> Product Design <i>·</i> Design System</p>
+      </div>
+      <!-- A capa muda de acordo com o tema atual -->
+      <figure class="hero-visual">
+        <span class="tape" aria-hidden="true"></span>
+        <img
+          class="hero-art hero-art--light"
+          src="assets/hero/capa.png"
+          alt="Referência conceitual do universo visual da marca: pensamentos transformados em experiências digitais"
+          width="1536"
+          height="1536"
+        >
+        <img
+          class="hero-art hero-art--dark"
+          src="assets/hero/capa-dark.png"
+          alt=""
+          width="1254"
+          height="1254"
+          aria-hidden="true"
+        >
+        <figcaption>Referência conceitual do meu projeto</figcaption>
+      </figure>
+    </section>
+
+    <!-- Índice rápido das seções do manual -->
+    <div class="section-index-wrap" aria-label="Índice da página">
+      <nav class="section-index container">
+        <span>Explore</span><a href="#brand">Brand Concept</a><a href="#purpose">Purpose</a><a href="#positioning">Positioning</a><a href="#creative">Creative Direction</a><a href="#foundations">Foundations</a><a href="#assets">Assets</a><a href="#components">Components</a><a href="#patterns">Patterns</a><a href="#applications">Applications</a><a href="#product">From Brand to Product</a>
+      </nav>
+    </div>
+
+    <!-- ========================================
+         BRAND CONCEPT
+         Ideia central e processo da marca
+    ========================================= -->
+    <section class="section container" id="brand">
+      <header class="section-heading"><p class="eyebrow">01 — Brand Concept</p><h2>Não vendo apenas interfaces. Transformo ideias em experiências digitais.</h2></header>
+      <div class="editorial-story">
+        <div class="prose"><p>Tudo começa com uma ideia.</p><p>Ela pode nascer de uma pergunta, de uma curiosidade, da observação de um problema ou simplesmente da vontade de criar algo novo.</p><p>Meu processo transforma essas ideias em experiências digitais através da conexão entre pesquisa, design e desenvolvimento.</p></div>
+        <div class="process-flow" aria-label="Ideia, pesquisa, design, código e experiência"><span>Ideia</span><i>→</i><span>Pesquisa</span><i>→</i><span>Design</span><i>→</i><span>Código</span><i>→</i><span>Experiência</span></div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         PROPÓSITO, MISSÃO E VISÃO
+         Princípios que orientam a marca
+    ========================================= -->
+    <section class="section container" id="purpose">
+      <header class="section-heading compact"><p class="eyebrow">02 — Propósito · Missão · Visão</p><h2>Propósito orienta. Design materializa.</h2></header>
+      <div class="purpose-layout">
+        <article><span>01</span><h3>Propósito</h3><p>Dar vida a ideias através do design e do desenvolvimento, criando produtos digitais que façam sentido para quem os utiliza.</p></article>
+        <article><span>02</span><h3>Missão</h3><p>Criar produtos digitais que resolvam problemas reais através de interfaces claras, humanas e bem pensadas.</p></article>
+        <article><span>03</span><h3>Visão</h3><p>Conectar design, tecnologia e experiência do usuário na construção de produtos digitais com propósito.</p></article>
+      </div>
+    </section>
+
+    <!-- ========================================
+         POSITIONING & PERSONALITY
+         Posicionamento e traços da marca
+    ========================================= -->
+    <section class="section container" id="positioning">
+      <header class="section-heading"><p class="eyebrow">03 — Positioning &amp; Personality</p><h2>Criadora de experiências digitais.</h2><p>Front-End Developer em formação · Explorando Product Design e UX/UI.</p></header>
+      <div class="positioning-grid">
+        <div class="manifesto"><p>Meu trabalho não começa no código.</p><p>Começa entendendo o problema.</p></div>
+        <div class="personality" aria-label="Personalidade da marca"><p>Criativa, <em>mas não confusa.</em></p><p>Profissional, <em>mas não fria.</em></p><p>Didática, <em>mas não técnica demais.</em></p><p>Organizada, <em>mas não robótica.</em></p><ul class="personality-traits" aria-label="Traços da marca"><li>Humana</li><li>Curiosa</li><li>Estratégica</li><li>Acessível</li><li>Confiável</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CREATIVE DIRECTION
+         Linguagem e princípios visuais
+    ========================================= -->
+    <section class="section container" id="creative">
+      <header class="section-heading"><p class="eyebrow">04 — Creative Direction</p><h2>Editorial Creative <em>×</em> Digital Design</h2><p>Uma identidade minimalista, mas não fria. Criativa, mas organizada. Moderna, mas humana. Elegante, mas acessível.</p></header>
+      <p class="creative-transition" aria-label="Da marca para a linguagem visual e o Design System">
+        <span>Brand</span><i aria-hidden="true">?</i><strong>Visual Language</strong><i aria-hidden="true">?</i><span>Design System</span>
+      </p>
+      <div class="creative-composition">
+        <div class="thought-sequence">
+          <p class="eyebrow">Visual Language</p>
+          <ol>
+            <li><span>01</span><div><h3>Pensamento</h3><p>A ideia começa aberta, curiosa e ainda sem forma definitiva.</p></div></li>
+            <li><span>02</span><div><h3>Conexão</h3><p>Linhas e relações organizam o percurso sem apagar a espontaneidade.</p></div></li>
+            <li><span>03</span><div><h3>Construção</h3><p>Hierarquia, grid e componentes transformam intenção em interface.</p></div></li>
+          </ol>
+        </div>
+        <div class="creative-vocabulary" aria-label="Vocabulário visual da direção criativa">
+          <span>caderno de ideias</span><span>respiro editorial</span><span>conexões visuais</span><span>interface digital</span>
+        </div>
+      </div>
+      <div class="visual-principles">
+        <header><p class="eyebrow">Gramática visual</p><h3>Gestos com função, não decoração.</h3></header>
+        <dl>
+          <div><dt>Direção</dt><dd>A linha conduz o olhar e torna a sequência perceptível.</dd></div>
+          <div><dt>Ênfase</dt><dd>Escala, contraste e espaço destacam o que realmente importa.</dd></div>
+          <div><dt>Voz humana</dt><dd>A anotação aparece com moderação para comentar, não competir.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOUNDATIONS
+         Regras visuais reutilizadas no sistema
+    ========================================= -->
+    <section class="section technical container" id="foundations">
+      <header class="section-heading"><p class="eyebrow">05 — Foundations</p><h2>Da identidade às regras reutilizáveis.</h2><p>A identidade deixa de ser apenas visual quando começa a se transformar em regras reutilizáveis.</p></header>
+      <div class="foundation-board">
+        <!-- Logo principal e versões oficiais -->
+        <section class="foundation-logo" aria-labelledby="foundation-logo-title">
+          <div><p class="foundation-label">05.1 / Marca</p><h3 id="foundation-logo-title">Logo</h3><p>O C representa Carolina. O ponto pequeno representa ideia, semente, início e possibilidade. A planta pertence ao universo visual, não ao logo.</p><p>Logo principal para identificação. Assinatura manuscrita para presença humana. Assinatura reduzida para contextos menores e discretos.</p></div>
+          <figure class="foundation-logo-main"><img src="../../assets/img/brand/logo/Logo_principal.png" alt="Logo principal Carolina Garcez"></figure>
+          <div class="foundation-logo-variants"><figure><img src="../../assets/img/brand/logo/ic_marca.png" alt="Símbolo da marca"><figcaption>Brand Mark / Símbolo da Marca</figcaption></figure><figure><img src="../../assets/img/brand/logo/vertical.png" alt="Logo vertical"><figcaption>Vertical</figcaption></figure><figure><img src="../../assets/img/brand/logo/selo.png" alt="Selo da marca"><figcaption>Selo</figcaption></figure></div>
+        </section>
+
+        <!-- Paleta cromática: composição editorial de tokens e significados -->
+        <section class="foundation-colors" aria-labelledby="foundation-colors-title">
+          <div class="color-intro">
+            <div class="color-intro-copy"><p class="foundation-label">05.2 / TOKENS CROMÁTICOS</p><span class="color-scribble" aria-hidden="true"></span><h3 id="foundation-colors-title">Paleta cromática<span>.</span></h3><p>Uma paleta contida, criada para equilibrar<br>expressão humana e estrutura digital.</p></div>
+            <div class="color-manifesto-wrap"><div class="color-manifesto"><span class="color-tape" aria-hidden="true"></span><p><b class="green-text"></b><strong>Verde</strong> — ideias que ganham vida.<small>Identidade · crescimento · construção · ação.</small></p><p><b class="purple-text"></b><strong>Roxo</strong> — ideias que exploram possibilidades.<small>Criatividade · experimentação · descoberta · expressão.</small></p></div><div class="color-doodles" aria-hidden="true"><span class="branch">⌁</span><i></i><i></i><b></b></div></div>
+          </div>
+          <div class="color-board">
+            <section class="color-theme" aria-labelledby="light-colors-title"><header><span class="mode-icon sun" aria-hidden="true">☼</span><h4 id="light-colors-title">LIGHT MODE</h4><em>Aplicação em fundos claros</em><i aria-hidden="true"></i></header><ul class="color-swatches">
+              <li style="--swatch:#2E8B57"><i aria-hidden="true"></i><div><strong>Verde</strong><small>Principal</small><code>#2E8B57</code><b></b><p>Cor principal da marca. Representa crescimento, construção e ação.</p></div></li>
+              <li style="--swatch:#E7F4EC"><i aria-hidden="true"></i><div><strong>Verde Suave</strong><small>Apoio</small><code>#E7F4EC</code><b></b><p>Tons de apoio que trazem leveza, equilíbrio e respiro visual.</p></div></li>
+              <li style="--swatch:var(--ds-purple)"><i aria-hidden="true"></i><div><strong>Roxo</strong><small>Acento</small><code>#8877FF</code><b></b><p>Cor de destaque para ideias, criatividade, experimentação e expressão.</p></div></li>
+              <li style="--swatch:var(--ds-purple-light)"><i aria-hidden="true"></i><div><strong>Roxo Suave</strong><small>Apoio</small><code>#E9DDFB</code><b></b><p>Apoio delicado ao roxo, ideal para fundos, tags e estados suaves.</p></div></li>
+              <li style="--swatch:#191919"><i aria-hidden="true"></i><div><strong>Preto</strong><small>Estrutura</small><code>#191919</code><b></b><p>Cor de estrutura para textos, títulos e elementos principais.</p></div></li>
+              <li style="--swatch:#FDFFFC"><i aria-hidden="true"></i><div><strong>Off-white</strong><small>Base</small><code>#FDFFFC</code><b></b><p>Fundo base que garante clareza, contraste e conforto visual.</p></div></li>
+            </ul></section>
+            <section class="color-theme color-theme--dark" aria-labelledby="dark-colors-title"><header><span class="mode-icon moon" aria-hidden="true">☾</span><h4 id="dark-colors-title">DARK MODE</h4><em>Aplicação em fundos escuros</em><i aria-hidden="true"></i></header><ul class="color-swatches">
+              <li style="--swatch:var(--ds-primary)"><i aria-hidden="true"></i><div><strong>Verde</strong><small>Principal</small><code>#4DB881</code><b></b><p>Versão mais luminosa para garantir contraste e legibilidade no dark mode.</p></div></li>
+              <li style="--swatch:var(--ds-accent)"><i aria-hidden="true"></i><div><strong>Verde Suave</strong><small>Apoio</small><code>#203A2D</code><b></b><p>Tons de apoio mais escuros para fundos e separações sutis.</p></div></li>
+              <li style="--swatch:var(--ds-purple)"><i aria-hidden="true"></i><div><strong>Roxo</strong><small>Acento</small><code>#A78BFA</code><b></b><p>Versão adaptada para manter destaque e acessibilidade no dark mode.</p></div></li>
+              <li style="--swatch:var(--ds-purple-light)"><i aria-hidden="true"></i><div><strong>Roxo Suave</strong><small>Apoio</small><code>#332B52</code><b></b><p>Apoio escuro ao roxo para fundos, tags e estados suaves.</p></div></li>
+              <li style="--swatch:var(--ds-bg)"><i aria-hidden="true"></i><div><strong>Preto</strong><small>Estrutura</small><code>#101513</code><b></b><p>Base escura profunda para estrutura, títulos e ícones.</p></div></li>
+              <li style="--swatch:var(--ds-title)"><i aria-hidden="true"></i><div><strong>Off-white</strong><small>Base</small><code>#F3F4F1</code><b></b><p>Texto e elementos claros para contraste e conforto no escuro.</p></div></li>
+            </ul></section>
+          </div>
+          <div class="color-meaning" aria-label="Papel conceitual das cores na marca"><article><span class="meaning-doodle leaf" aria-hidden="true"></span><div><h4>O VERDE COMO ASSINATURA</h4><p>Presente nos elementos principais e interações, ele guia o olhar e reforça a identidade da marca.</p><b class="meaning-line green-line"></b></div></article><article><span class="meaning-doodle bulb" aria-hidden="true"></span><div><h4>O ROXO COMO EXPLORAÇÃO</h4><p>Usado como acento para estimular criatividade, destacar ideias e abrir espaço para novas possibilidades.</p><b class="meaning-line purple-line"></b></div></article><article><span class="meaning-doodle document" aria-hidden="true"></span><div><h4>NEUTROS QUE APOIAM</h4><p>Preto para estrutura e off-white para fundos garantem legibilidade, foco e equilíbrio em todas as páginas.</p><b class="meaning-line black-line"></b></div></article><a class="color-cta" href="#foundations">Ver combinações <span>→</span><b></b></a></div>
+        </section>
+        <section class="foundation-botanical" aria-labelledby="foundation-botanical-title">
+          <header><p class="foundation-label">05.2.1 / Sistema botânico</p><h3 id="foundation-botanical-title">Crescimento com significado.</h3><p>A planta não é decoração recorrente: ela acompanha momentos de evolução quando existe uma etapa real para comunicar.</p></header>
+          <ol aria-label="Etapas de crescimento da marca"><li><span aria-hidden="true"></span><strong>Semente</strong><small>Ideia aberta</small></li><li><span aria-hidden="true"></span><strong>Broto</strong><small>Exploração</small></li><li><span aria-hidden="true"></span><strong>Crescimento</strong><small>Construção</small></li><li><span aria-hidden="true"></span><strong>Maturidade</strong><small>Produto</small></li><li><span aria-hidden="true"></span><strong>Nova ideia</strong><small>Aprendizado</small></li></ol>
+        </section>
+        <!-- Manrope estrutura a interface; Caveat entra nos detalhes expressivos -->
+        <section class="foundation-typography foundation-mosaic" aria-labelledby="foundation-type-title">
+          <header class="foundation-mosaic-heading"><p class="foundation-label">05.3 / Escala tipográfica</p><h3 id="foundation-type-title">Typography</h3></header>
+          <div class="type-zone type-zone--manrope">
+            <p class="type-zone-label">Fonte principal · estrutura digital</p>
+            <div class="type-display">Display / Manrope 700</div>
+            <div class="type-h1"><span>H1</span>Ideias ganham vida.</div>
+            <div class="type-h2"><span>H2</span>Design com propósito.</div>
+            <div class="type-h3"><span>H3</span>Clareza e intenção.</div>
+          </div>
+          <div class="type-zone type-zone--technical">
+            <p class="type-zone-label">Escala funcional</p>
+            <dl>
+              <div><dt>Body</dt><dd><strong>Interfaces claras, humanas e bem pensadas.</strong><code>1rem · 400 · 1.65</code></dd></div>
+              <div><dt>Small</dt><dd><strong>Informações complementares</strong><code>.875rem · 400</code></dd></div>
+              <div><dt>Caption</dt><dd><strong>CONTEXTO · 2026</strong><code>.75rem · tracking</code></dd></div>
+              <div><dt>Label</dt><dd><strong>FRONT-END DEVELOPER</strong><code>.75rem · 700</code></dd></div>
+            </dl>
+          </div>
+          <div class="type-zone type-zone--caveat">
+            <p class="type-zone-label">Fonte expressiva · intervenção humana</p>
+            <strong>Caveat · detalhes manuscritos</strong>
+            <div><span>uma ideia por vez</span><span>comentário da autora</span><span>estrutura + intenção</span></div>
+            <p>Usar em pensamentos, anotações e comentários pontuais — nunca como fonte de interface.</p>
+          </div>
+        </section>
+
+        <!-- Escala de espaçamento, container e grid de 12 colunas -->
+        <section class="foundation-layout foundation-system-strip" aria-labelledby="foundation-layout-title">
+          <header><p class="foundation-label">05.4 / Ritmo e estrutura</p><h3 id="foundation-layout-title">Spacing &amp; Grid</h3><p>Organização visível por meio de distância, alinhamento e proporção.</p></header>
+          <div class="spacing-field" aria-label="Escala de espaçamento de 4 a 64 pixels">
+            <div style="--size:4px"><i></i><code>1 / 4</code></div><div style="--size:8px"><i></i><code>2 / 8</code></div><div style="--size:12px"><i></i><code>3 / 12</code></div><div style="--size:16px"><i></i><code>4 / 16</code></div><div style="--size:24px"><i></i><code>5 / 24</code></div><div style="--size:32px"><i></i><code>6 / 32</code></div><div style="--size:48px"><i></i><code>7 / 48</code></div><div style="--size:64px"><i></i><code>8 / 64</code></div>
+          </div>
+          <div class="layout-field">
+            <div class="container-demo"><span>viewport</span><div><b>--container · 1200px</b></div></div>
+            <div class="grid-demo" aria-label="Grid conceitual com 12 colunas e gutters responsivos"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <p><code>12 colunas</code><code>gutters · 16–32px</code><code>colapso progressivo</code></p>
+          </div>
+        </section>
+
+        <!-- Radius, tipos de borda e níveis de sombra -->
+        <section class="foundation-shape foundation-system-strip" aria-labelledby="foundation-shape-title">
+          <header><p class="foundation-label">05.5 / Forma e profundidade</p><h3 id="foundation-shape-title">Radius · Borders · Shadows</h3><p>Tokens que materializam superfície, limite e profundidade.</p></header>
+          <div class="shape-comparison">
+            <div class="shape-zone shape-zone--radius"><h4>Radius</h4><div aria-label="Escala de border radius"><i>8</i><i>12</i><i>20</i><i>30</i><i>pill</i></div></div>
+            <div class="shape-zone shape-zone--borders"><h4>Borders</h4><div><span>solid · interface</span><span>dashed · anotação</span></div></div>
+            <div class="shape-zone shape-zone--shadows"><h4>Shadows</h4><div><i>shadow-sm</i><i>shadow-md</i><i>shadow-lg</i></div></div>
+          </div>
+        </section>
+
+        <!-- Referência rápida das animações e suas regras de uso -->
+        <section class="foundation-motion" aria-labelledby="foundation-motion-title">
+          <header class="motion-header">
+            <div><p class="foundation-label">05.6 / Comportamento</p><h3 id="foundation-motion-title">Motion</h3></div>
+            <p class="motion-statement">Motion apoia a ideia, não compete com ela.</p>
+          </header>
+          <div class="motion-library motion-quick-reference">
+            <figure class="motion-demo motion-demo--fade"><div class="motion-canvas"><i></i><i></i></div><figcaption><strong>Entrada</strong><span>Fade + deslocamento suave.</span></figcaption></figure>
+            <figure class="motion-demo motion-demo--line"><div class="motion-canvas"><i></i></div><figcaption><strong>Traço</strong><span>Linha ou underline sendo desenhado.</span></figcaption></figure>
+            <figure class="motion-demo motion-demo--hover"><div class="motion-canvas"><a href="#components">Ver detalhes</a></div><figcaption><strong>Interação</strong><span>Microinteração de hover e focus.</span></figcaption></figure>
+            <figure class="motion-demo motion-demo--theme"><div class="motion-canvas"><span>Light</span><b>Dark</b></div><figcaption><strong>Tema</strong><span>Transição suave entre Light e Dark.</span></figcaption></figure>
+          </div>
+          <dl class="motion-rules"><div><dt>Duração</dt><dd>180–600ms</dd></div><div><dt>Easing</dt><dd>Curva suave, sem bounce</dd></div><div><dt><code>prefers-reduced-motion</code></dt><dd>Conteúdo estático, completo e sem depender da animação</dd></div></dl>
+        </section>
+      </div>
+    </section>
+
+    <!-- ========================================
+         ASSETS
+         Catálogo e direção artística da identidade
+    ========================================= -->
+    <section class="section technical container" id="assets">
+      <header class="section-heading"><p class="eyebrow">06 — Assets</p><h2>Um catálogo visual da identidade.</h2><p>Somente elementos oficiais aparecem aqui. Referências externas permanecem fora deste catálogo.</p></header>
+      <div class="asset-library">
+        <header class="asset-library-header">
+          <p class="asset-library-kicker">Brand Assets</p>
+          <p>Arquivos oficiais prontos para uso. Cada família possui uma função específica dentro da identidade.</p>
+          <strong>Identidade visual em uso.</strong>
+        </header>
+        <section class="background-family" aria-labelledby="backgrounds-title">
+          <header><span>Família 01</span><h3 id="backgrounds-title">Backgrounds</h3><p>Apoiam a atmosfera sem competir com conteúdo ou legibilidade.</p></header>
+          <figure><div class="background-sample" style="background-image:url('../../assets/img/brand/bg/star.png')"></div><figcaption><b>Star field</b><span>Uso pontual em áreas de descoberta. Evitar atrás de textos longos ou interfaces densas.</span></figcaption></figure>
+        </section>
+        <section class="pending-families" aria-labelledby="pending-assets-title">
+          <header><span>Linguagem visual</span><h3 id="pending-assets-title">Pontos · Linhas · Botânico</h3><p>Famílias semânticas que orientam possibilidades, percursos e evolução dentro da narrativa da marca.</p></header>
+          <div class="asset-family-sheet">
+            <article class="asset-family-row">
+              <div class="asset-family-heading"><h4>Família 02 / Pontos e linhas</h4></div>
+              <p>O ponto inicia possibilidades; a linha conecta etapas e conduz decisões. Usar com função, não como confete.</p>
+            </article>
+            <article class="asset-family-row">
+              <div class="asset-family-heading"><h4>Família 03 / Botânico</h4></div>
+              <p>Folhas e estágios de crescimento representam aprendizado, construção e novas possibilidades.</p>
+            </article>
+            <article class="asset-family-row">
+              <div class="asset-family-heading"><h4>Família 04 / Textura discreta</h4></div>
+              <p>Materialidade quase imperceptível para apoiar o conteúdo sem colagem, fita, post-it ou scrapbook.</p>
+            </article>
+          </div>
+        </section>
+        <!-- Síntese da direção artística -->
+        <section class="visual-language" aria-labelledby="visual-language-title">
+          <header><p class="asset-library-kicker">Linguagem visual em uso</p><h3 id="visual-language-title">Um sistema, não uma coleção.</h3><p>Cada composição parte de uma origem e conduz a uma transformação. Use um protagonista e, no máximo, um apoio.</p></header>
+          <div class="language-compositions">
+            <article class="language-composition language-composition--idea"><span class="language-step">01 / POSSIBILIDADE</span><div class="language-stage"><b class="origin-dot" aria-hidden="true"></b><strong>Ideia</strong></div><p>Ponto + espaço. A possibilidade ainda está aberta.</p></article>
+            <article class="language-composition language-composition--explore"><span class="language-step">02 / EXPLORAÇÃO</span><div class="language-stage"><b class="origin-dot" aria-hidden="true"></b><i class="route-line" aria-hidden="true"></i><strong>Explorar</strong></div><p>Ponto + linha. O caminho começa a aparecer.</p></article>
+            <article class="language-composition language-composition--direction"><span class="language-step">03 / DIREÇÃO</span><div class="language-stage"><i class="converging-lines" aria-hidden="true"></i><strong>Direção</strong></div><p>Linhas convergem para uma decisão.</p></article>
+            <article class="language-composition language-composition--structure"><span class="language-step">04 / ESTRUTURA</span><div class="language-stage"><i class="structure-grid" aria-hidden="true"></i><strong>Construção</strong></div><p>Grid suave organiza interface e código.</p></article>
+            <article class="language-composition language-composition--growth"><span class="language-step">05 / EVOLUÇÃO</span><div class="language-stage"><i class="growth-stem" aria-hidden="true"></i><strong>Crescimento</strong></div><p>O broto registra aprendizado e nova possibilidade.</p></article>
+          </div>
+          <div class="icon-system"><div><span class="language-step">BASE DE ICONOGRAFIA</span><h4>Estruturados para interface.</h4><p>12 ícones essenciais, com stroke 1.75, viewBox 24 × 24, linecap round e linejoin round. Verde indica direção; roxo indica possibilidade.</p></div><div class="icon-grid" aria-label="Ícones essenciais da biblioteca autoral"><figure><svg aria-hidden="true"><use href="assets/icons/icons.svg#home"/></svg><figcaption>Home</figcaption></figure><figure><svg aria-hidden="true"><use href="assets/icons/icons.svg#projects"/></svg><figcaption>Projetos</figcaption></figure><figure><svg aria-hidden="true"><use href="assets/icons/icons.svg#code"/></svg><figcaption>Código</figcaption></figure><figure><svg aria-hidden="true"><use href="assets/icons/icons.svg#design"/></svg><figcaption>Design</figcaption></figure><figure><svg aria-hidden="true"><use href="assets/icons/icons.svg#research"/></svg><figcaption>Pesquisa</figcaption></figure><figure><svg aria-hidden="true"><use href="assets/icons/icons.svg#process"/></svg><figcaption>Processo</figcaption></figure><figure><svg aria-hidden="true"><use href="assets/icons/icons.svg#learning"/></svg><figcaption>Aprendizado</figcaption></figure><figure><svg aria-hidden="true"><use href="assets/icons/icons.svg#insight"/></svg><figcaption>Insight</figcaption></figure><figure><svg aria-hidden="true"><use href="assets/icons/icons.svg#contact"/></svg><figcaption>Contato</figcaption></figure><figure><svg aria-hidden="true"><use href="assets/icons/icons.svg#profile"/></svg><figcaption>Perfil</figcaption></figure><figure><svg aria-hidden="true"><use href="assets/icons/icons.svg#growth"/></svg><figcaption>Crescimento</figcaption></figure><figure><svg aria-hidden="true"><use href="assets/icons/icons.svg#experiment"/></svg><figcaption>Experimento</figcaption></figure></div></div>
+        </section>
+        <section class="composition-system" aria-labelledby="composition-system-title">
+          <header><p class="asset-library-kicker">Composition System</p><h3 id="composition-system-title">Regras para combinar intenção e forma.</h3><p>Princípios flexíveis extraídos da referência visual. A composição deve respirar antes de receber personalidade.</p></header>
+          <div class="composition-rules"><article><span>01 / HERO</span><h4>Origem + direção</h4><p>Uma mensagem principal, bastante espaço e um único gesto visual conduzindo o olhar.</p></article><article><span>02 / EDITORIAL</span><h4>Texto + respiro</h4><p>Hierarquia tipográfica forte, intervenção manuscrita pequena e linhas finas de apoio.</p></article><article><span>03 / PROCESS</span><h4>Etapas visíveis</h4><p>Use ponto, percurso e estrutura para tornar uma transformação compreensível.</p></article><article><span>04 / PROJECT</span><h4>Contexto + resultado</h4><p>Imagem ou interface protagonista; o conteúdo explica a decisão sem competir com ela.</p></article><article><span>05 / GROWTH</span><h4>Ritmo crescente</h4><p>Planta e folhas aparecem quando representam aprendizado, evolução ou construção.</p></article><article><span>06 / EXPERIMENTAL</span><h4>Uma tensão controlada</h4><p>Permita assimetria, textura leve ou roxo pontual — nunca todos ao mesmo tempo.</p></article></div>
+        </section>
+        <aside class="visual-references" aria-labelledby="visual-references-title">
+          <header><p class="asset-library-kicker">Síntese da linguagem visual</p><h3 id="visual-references-title">Direção Artística</h3><p>Cada interferência existe para orientar, conectar ou contar alguma coisa.</p></header>
+          <blockquote class="art-direction-statement"><strong>Direção,</strong><span>não decoração.</span></blockquote>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========================================
+         COMPONENTS
+         Componentes reais e seus estados
+    ========================================= -->
+    <section class="section technical container" id="components">
+      <header class="components-heading">
+        <div><p class="eyebrow">05.1 / COMPONENTES</p><h2>Pe&ccedil;as reais da interface<span>.</span></h2><p>Os componentes abaixo s&atilde;o as pe&ccedil;as usadas<br>na interface para construir experi&ecirc;ncias consistentes.</p></div>
+        <div class="components-doodle" aria-hidden="true"><span class="doodle-leaf">&#9752;</span><i>&#10023;</i><b>&#10022;</b></div>
+      </header>
+
+      <nav class="component-index" aria-label="Navega&ccedil;&atilde;o interna dos componentes">
+        <a class="is-active" href="#component-buttons"><i></i>Buttons</a><a href="#component-navigation"><i></i>Navigation</a><a href="#component-inputs"><i></i>Inputs</a><a href="#component-gallery"><i></i>Componentes</a>
+      </nav>
+
+      <div class="component-documentation">
+        <section class="component-feature component-buttons" id="component-buttons" aria-labelledby="buttons-title">
+          <header><p class="component-number">05.1.1</p><h3 id="buttons-title">Buttons</h3><p>A&ccedil;&otilde;es principais, secund&aacute;rias e varia&ccedil;&otilde;es de estado para orientar o usu&aacute;rio.</p></header>
+          <div class="button-demo-panel"><p>TEXTO QUE CONECTA</p><h4>Vamos dar vida a ela.</h4><div><a class="btn-primary" href="#applications">Ver projeto</a><a class="btn-secondary" href="#product">Conhe&ccedil;a meu processo</a></div></div>
+          <div class="button-states" aria-label="Estados do bot&atilde;o Continuar">
+            <div><span>Default</span><button class="btn-primary" type="button">Continuar</button></div>
+            <div><span>Hover</span><button class="btn-primary is-hover" type="button">Continuar</button></div>
+            <div><span>Focus</span><button class="btn-primary is-focus" type="button">Continuar</button></div>
+            <div><span>Active</span><button class="btn-primary is-active" type="button">Continuar</button></div>
+            <div><span>Disabled</span><button class="btn-primary" type="button" disabled>Continuar</button></div>
+            <p>Estados garantem clareza, acessibilidade e feedback para as intera&ccedil;&otilde;es.</p>
+          </div>
+        </section>
+
+        <div class="component-pair">
+          <section class="component-feature component-navigation" id="component-navigation" aria-labelledby="navigation-title">
+            <header><p class="component-number">05.1.2</p><h3 id="navigation-title">Navigation</h3><p>Links principais que guiam o usu&aacute;rio pela interface, destacando a p&aacute;gina atual.</p></header>
+            <nav class="navigation-context" aria-label="Exemplo de navega&ccedil;&atilde;o"><span class="navigation-brand">Carolina Garcez</span><ul class="menu"><li><a href="#components" class="is-active" aria-current="page">Componentes</a></li><li><a href="../../index.html#projects">Projetos</a></li><li><a href="#patterns">Aprendizados</a></li><li><a href="#brand">Sobre</a></li></ul></nav>
+          </section>
+
+          <section class="component-feature component-inputs" id="component-inputs" aria-labelledby="inputs-title">
+            <header><p class="component-number">05.1.3</p><h3 id="inputs-title">Inputs</h3><p>Campos de entrada com estados claros para facilitar o preenchimento.</p></header>
+            <div class="input-states">
+              <label><span>Label / Default</span><input type="text" placeholder="Digite algo aqui..."></label>
+              <label><span>Focus</span><input class="is-focus" type="text" value="Texto em foco"></label>
+              <label><span>Error</span><input class="is-error" type="text" value="Mensagem de erro" aria-invalid="true" aria-describedby="component-input-error"><small id="component-input-error">Por favor, revise este campo.</small></label>
+            </div>
+          </section>
+        </div>
+
+        <section class="component-gallery" id="component-gallery" aria-labelledby="gallery-title">
+          <header><h3 id="gallery-title">Componentes</h3><a href="#components">Ver todos os componentes <span>&rarr;</span></a></header>
+          <div class="component-gallery-grid">
+            <article><h4>Bot&otilde;es</h4><div class="gallery-buttons"><button class="btn-primary" type="button">Prim&aacute;rio <span>&rarr;</span></button><button class="btn-secondary" type="button">Secund&aacute;rio</button><a href="#components">Link de texto <span>&rarr;</span></a></div></article>
+            <article><h4>Tags e Badges</h4><div class="badge-list"><span>Design</span><span>Desenvolvimento</span><span>UX/UI</span></div></article>
+            <article><h4>Card</h4><div class="mini-card"><h5>T&iacute;tulo do card</h5><p>Breve descri&ccedil;&atilde;o do conte&uacute;do deste card. Ele organiza informa&ccedil;&otilde;es de forma clara.</p><a href="#components">Ver mais <span>&rarr;</span></a></div></article>
+            <article class="gallery-inputs"><h4>Input</h4><div class="input-states"><label><span>Label</span><input type="text" placeholder="Digite algo aqui..."></label><label><span>Focus</span><input class="is-focus" type="text" value="Texto em foco"></label><label><span>Error</span><input class="is-error" type="text" value="Mensagem de erro" aria-label="Exemplo de input com erro"></label></div></article>
+          </div>
+        </section>
+      </div>
+
+      <footer class="components-note"><i aria-hidden="true">&#10022;</i><p>Componentes consistentes criam experi&ecirc;ncias intuitivas, acess&iacute;veis e alinhadas com a identidade visual.</p><span aria-hidden="true">&#10551;</span></footer>
+    </section>
+
+    <!-- ========================================
+         PATTERNS
+         Componentes combinados em composições
+    ========================================= -->
+    <section class="section technical container" id="patterns">
+      <header class="section-heading"><p class="eyebrow">08 — Patterns</p><h2>Componentes em composição.</h2><p>Soluções recorrentes de layout, não componentes isolados.</p></header>
+      <div class="pattern-principles" aria-label="Princípios semânticos dos patterns"><article><b>Pontos</b><span>possibilidades</span></article><article><b>Linhas</b><span>conexão e percurso</span></article><article><b>Grid</b><span>estrutura e construção</span></article><article><b>Botânico</b><span>crescimento e evolução</span></article><p>Uma composição: 1 protagonista + no máximo 1 apoio.</p></div>
+      <div class="pattern-board">
+        <article class="pattern-demo pattern-editorial-block">
+          <span class="pattern-label">01 / Editorial Block</span>
+          <strong>Uma ideia ainda aberta.</strong>
+          <div><p>O conteúdo desenvolve o raciocínio com ritmo e espaço.</p><em>anotação humana, com moderação</em></div>
+        </article>
+
+        <article class="pattern-demo pattern-image-content">
+          <span class="pattern-label">02 / Image + Content</span>
+          <img src="../../assets/img/fotos/perfil.webp" alt="Carolina Garcez">
+          <div><small>SOBRE MIM</small><h3>Humana no centro.</h3><p>Imagem e conteúdo constroem a mesma narrativa.</p></div>
+        </article>
+
+        <article class="pattern-demo pattern-case-study">
+          <span class="pattern-label">03 / Project / Case Composition</span>
+          <div><small>CASE STUDY · 2026</small><h3>Do problema à experiência.</h3><p>Contexto e desafio abrem a narrativa do projeto.</p></div>
+          <dl><div><dt>Papel</dt><dd>Design + Front-End</dd></div><div><dt>Foco</dt><dd>Clareza e intenção</dd></div></dl>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================
+         APPLICATIONS
+         O sistema aplicado no portfólio
+    ========================================= -->
+    <section class="section technical container" id="applications">
+      <header class="section-heading"><p class="eyebrow">09 — Applications</p><h2>Como essas decisões aparecem no produto?</h2></header>
+      <div class="application-system">
+        <div class="application-chain" aria-label="Da marca até a interface"><span>Brand</span><i aria-hidden="true"></i><span>Tokens</span><i aria-hidden="true"></i><span>Components</span><i aria-hidden="true"></i><strong>Interface</strong></div>
+
+        <figure class="portfolio-application">
+          <div class="browser-frame">
+            <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><b>portfolio / hero</b></div>
+            <div class="portfolio-hero-application">
+              <div class="portfolio-hero-copy"><p class="portfolio-kicker">Front-End Developer em formação</p><h3>Algumas pessoas colecionam objetos.<br><strong>Eu coleciono ideias.</strong></h3><p>Transformo ideias em experiências digitais unindo criatividade, design e desenvolvimento.</p><div><a class="application-primary-action" href="../../index.html#projects">Ver projetos</a><a class="application-text-link" href="../../index.html#about">Conheça minha história</a></div></div>
+              <div class="portfolio-hero-photo"><img src="../../assets/img/fotos/moldura.png" alt="Carolina Garcez em composição com elementos gráficos sobre ideias e tecnologia"></div>
+            </div>
+          </div>
+          <figcaption><strong>Aplicação real · Hero do portfólio</strong><span>Construído com conteúdo, tokens, componentes e o asset fotográfico oficial <code>moldura.png</code>.</span></figcaption>
+        </figure>
+
+        <div class="application-evidence" aria-label="Evidências do sistema aplicadas na interface">
+          <section><span>01 / Brand</span><p>Narrativa, fotografia humana e intervenção gráfica.</p></section>
+          <section><span>02 / Tokens</span><div class="application-token-row" aria-label="Cores aplicadas"><i style="--token:#F7FAF8"></i><i style="--token:#1A1F1C"></i><i style="--token:#2E8B57"></i><i style="--token:#D8F3E5"></i></div><p>Cor, tipografia, spacing e contraste estruturam o layout.</p></section>
+          <section><span>03 / Components</span><a class="application-primary-action" href="../../index.html#projects">Ver projetos</a><p>Ação principal e link editorial preservam familiaridade.</p></section>
+          <section><span>04 / Interface</span><h3>Decisões em contexto.</h3><p>O sistema deixa de ser catálogo quando resolve uma composição real.</p></section>
+        </div>
+
+        <aside class="application-reference-note"><strong>Referência conceitual ≠ aplicação final</strong><p>O arquivo <code>assets/img/brand/references/mockup-hero.png</code> permanece no projeto apenas como referência visual. Ele não é utilizado neste mockup de produto.</p></aside>
+      </div>
+    </section>
+
+    <!-- ========================================
+         DA MARCA AO PRODUTO
+         Encerramento da narrativa
+    ========================================= -->
+    <section class="section finale container" id="product">
+      <header class="section-heading"><p class="eyebrow">10 — Da marca ao produto</p><h2>Da marca ao produto.</h2></header>
+      <p>Marca, regras e componentes não são etapas isoladas. Cada decisão prepara a próxima até o sistema se tornar algo claro, útil e reconhecível para quem usa.</p>
+      <strong class="final-statement">Ideias ganham <em>vida aqui.</em></strong>
+    </section>
+  </main>
+
+  <!-- ========================================
+       FOOTER
+       Assinatura, redes sociais e retorno ao portfólio
+  ========================================= -->
+  <footer class="footer">
+    <div class="footer-content">
+      <a class="footer-logo" href="../../index.html" aria-label="Carolina Garcez — voltar ao portfólio">Carolina Garcez</a>
+      <nav class="footer-social" aria-label="Redes sociais">
+        <a href="https://linkedin.com/in/carolinagarcez" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (abre em uma nova aba)</span></a>
+        <a href="https://github.com/CarolinaGarcez" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (abre em uma nova aba)</span></a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Carolina Garcez.</p>
+      <a class="footer-back" href="../../index.html">← Voltar ao portfólio</a>
+    </div>
+  </footer>
+  <script src="design-system.js"></script>
+</body>
+</html>

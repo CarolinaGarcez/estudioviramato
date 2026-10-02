@@ -1,0 +1,65 @@
+﻿.portal-loading {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  gap: 20px;
+}
+
+/* portal */
+.portal-animation {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--color-neon-lime),
+    var(--color-neon-cyan),
+    #001a1a
+  );
+  animation:
+    spin 2s linear infinite,
+    pulse 1.5s ease infinite;
+  box-shadow:
+    0 0 40px var(--color-neon-cyan),
+    0 0 80px var(--color-neon-cyan);
+}
+
+/* texto */
+.portal-loading h2 {
+  color: var(--color-neon-cyan);
+  font-size: 2rem;
+  text-shadow: var(--glow-cyan-md);
+}
+
+.portal-loading p {
+  color: var(--color-text-white);
+  opacity: 0.8;
+}
+
+/* rotaÃ§Ã£o */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* pulsaÃ§Ã£o */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

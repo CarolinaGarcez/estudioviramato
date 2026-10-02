@@ -1,0 +1,101 @@
+﻿:root{
+
+/*==============================
+=        COLORS
+==============================*/
+
+--color-bg:#F7FAF8;
+--color-surface:#FFFFFF;
+
+--color-title:#1A1F1C;
+--color-text:#5B6460;
+
+--color-primary:#2E8B57;
+--color-primary-dark:#1F6F4A;
+--color-primary-light:#D8F3E5;
+
+--color-dark:#0F1115;
+--color-dark-2:#171B22;
+
+--color-border:#E4E7E5;
+--color-border-light:#EEF2EF;
+
+--color-success:#2E8B57;
+--color-shadow:rgba(15,17,21,.08);
+
+/*==============================
+=        TYPOGRAPHY
+==============================*/
+
+--font-title:"Manrope",sans-serif;
+--font-text:"Manrope",sans-serif;
+--font-hand:"Caveat",cursive;
+
+/*==============================
+=        FONT SIZE
+==============================*/
+
+--fs-xs:.75rem;
+--fs-sm:.875rem;
+--fs-md:1rem;
+--fs-lg:1.25rem;
+--fs-xl:1.5rem;
+--fs-2xl:2rem;
+--fs-3xl:3rem;
+--fs-4xl:4rem;
+
+/*==============================
+=        WEIGHT
+==============================*/
+
+--fw-regular:400;
+--fw-medium:500;
+--fw-semibold:600;
+--fw-bold:700;
+
+/*==============================
+=        SPACING
+==============================*/
+
+--space-1:.25rem;
+--space-2:.5rem;
+--space-3:.75rem;
+--space-4:1rem;
+--space-5:1.5rem;
+--space-6:2rem;
+--space-7:3rem;
+--space-8:4rem;
+
+/*==============================
+=        BORDER
+==============================*/
+
+--radius-sm:8px;
+--radius-md:12px;
+--radius-lg:20px;
+--radius-xl:30px;
+--radius-pill:999px;
+
+/*==============================
+=        SHADOW
+==============================*/
+
+--shadow-sm:0 2px 8px rgba(0,0,0,.05);
+
+--shadow-md:0 8px 20px rgba(0,0,0,.08);
+
+--shadow-lg:0 20px 40px rgba(0,0,0,.12);
+
+/*==============================
+=        TRANSITIONS
+==============================*/
+
+--transition:.3s ease;
+
+/*==============================
+=        CONTAINER
+==============================*/
+
+--container:1200px;
+
+}

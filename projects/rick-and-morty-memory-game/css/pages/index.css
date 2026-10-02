@@ -1,0 +1,163 @@
+﻿/* =========================================================
+   PÃGINA DE ENTRADA (INDEX / LOGIN)
+========================================================= */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  background-color: var(--color-bg-dark);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.85)
+    ),
+    url('../../img/index/capa-inicial.png');
+  background-size: cover;
+  background-position: center;
+  will-change: filter;
+  transform: translateZ(0);
+  animation: psychedelic 12s linear infinite;
+}
+
+.login-form {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.login-box {
+  background: var(--color-bg-box);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--color-neon-cyan);
+  box-shadow: var(--glow-cyan-lg);
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+
+.login__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.login__header img {
+  width: 180px;
+}
+
+.login__header h1 {
+  color: var(--color-neon-green);
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  text-shadow: var(--glow-cyan-md);
+}
+
+.subtitle {
+  color: var(--color-neon-cyan);
+  font-size: 0.6em;
+  margin-top: 10px;
+}
+
+/* INPUT */
+.login__input {
+  width: 100%;
+  max-width: 250px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid var(--color-neon-blue);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--color-text-white);
+  text-align: center;
+}
+
+.login__input:focus {
+  border-color: var(--color-neon-green);
+  box-shadow: var(--glow-cyan-md);
+}
+
+.portal-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--color-neon-lime) 0%,
+    var(--color-neon-cyan) 30%,
+    transparent 70%
+  );
+  filter: blur(35px);
+  opacity: 0.28;
+  animation:
+    spin 12s linear infinite,
+    pulse 5s ease infinite;
+  z-index: 0;
+}
+
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+.intro-text {
+  color: var(--color-text-white);
+  text-align: center;
+  font-size: 0.9em;
+  line-height: 1.5;
+  max-width: 280px;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+/* ANIMAÃ‡Ã•ES */
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.08;
+  }
+}
+
+@keyframes psychedelic {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}

@@ -1,0 +1,92 @@
+﻿/* =========================================================
+   LAYOUT PRINCIPAL DO JOGO & ELEMENTOS DE CABEÃ‡ALHO
+========================================================= */
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;  
+  padding: 10px;
+  padding-bottom: 40px;
+  gap: 5px;
+}
+
+header {
+  padding: 10px 15px;
+  font-size: 0.9em;
+  color: var(--color-text-white);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 750px;
+}
+
+/* TÃ­tulo e Logo */
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.titulo img {
+  width: 140px;
+  filter: drop-shadow(var(--glow-cyan-md));
+}
+
+.titulo h1 {
+  color: var(--color-neon-green);
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  text-shadow: var(--glow-cyan-md);
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--color-neon-cyan);
+  font-size: 0.7em;
+  margin: 0;
+}
+
+/* Grade de Cartas com Perspectiva 3D & Painel Glassmorphic */
+.grid {
+  display: grid;
+  gap: 12px;
+  width: 90%;
+  max-width: 750px;
+  margin: 10px auto;
+  padding: 16px;
+  justify-items: stretch;
+  align-items: stretch;
+  min-height: 200px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 255, 204, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), var(--glow-cyan-sm);
+  perspective: 1000px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsividade de Tela */
+@media (max-width: 480px) {
+  .grid {
+    gap: 6px;
+    padding: 8px;
+    width: 98%;
+  }
+  header {
+    font-size: 0.8em;
+    padding: 10px 5px;
+  }
+}

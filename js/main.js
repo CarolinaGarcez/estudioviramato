@@ -6,11 +6,6 @@
   const mobileQuery = window.matchMedia('(max-width: 820px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const revealItems = [...document.querySelectorAll('[data-reveal]')];
-  document.querySelectorAll('.social-links a').forEach((link, index) => {
-    const labels = ['Instagram', 'LinkedIn', 'GitHub', 'E-mail'];
-    link.setAttribute('aria-label', labels[index]);
-  });
-
   const closeMenu = (returnFocus = false) => {
     if (!toggle || !nav) return;
     toggle.setAttribute('aria-expanded', 'false');
@@ -60,10 +55,6 @@
     revealItems.forEach((item) => observer.observe(item));
   }
 
-  const growthPath = document.querySelector('.growth-path');
-  const growthLength = growthPath?.getTotalLength();
-  if (growthLength) root.style.setProperty('--growth-path-length', growthLength.toFixed(2));
-
   const door = document.querySelector('.door-interaction');
   const doorTrigger = door?.querySelector('.door-trigger');
   const setDoorOpen = (open, returnFocus = false) => {
@@ -83,15 +74,8 @@
   const updateScroll = () => {
     const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     const progress = Math.min(1, Math.max(0, window.scrollY / maxScroll));
-    const growth = reducedMotion.matches ? 1 : .035 + progress * .965;
-    root.style.setProperty('--growth-progress', growth.toFixed(4));
     root.style.setProperty('--hero-drift', reducedMotion.matches ? '0px' : `${(-progress * 3).toFixed(1)}px`);
     root.style.setProperty('--sprout-drift', reducedMotion.matches ? '0px' : `${(-progress * 7).toFixed(1)}px`);
-    root.style.setProperty('--profile-drift', reducedMotion.matches ? '0px' : `${(-progress * 5).toFixed(1)}px`);
-    root.style.setProperty('--leaf-one', reducedMotion.matches || growth > .14 ? '.62' : '0');
-    root.style.setProperty('--leaf-two', reducedMotion.matches || growth > .37 ? '.62' : '0');
-    root.style.setProperty('--leaf-three', reducedMotion.matches || growth > .6 ? '.62' : '0');
-    root.style.setProperty('--leaf-four', reducedMotion.matches || growth > .82 ? '.62' : '0');
     header?.classList.toggle('is-scrolled', window.scrollY > 24);
     ticking = false;
   };

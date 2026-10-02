@@ -1,0 +1,217 @@
+﻿/* =====================================
+   HERO
+===================================== */
+
+.hero {
+    /* Ocupa toda a altura da tela */
+    min-height: 100vh;
+    padding-top: 140px; /* Ajuste para o seu header */
+    padding-bottom: 80px;
+
+    /* LAYOUT CENTRALIZADO (Substitui Grid) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Centraliza todo o texto */
+    
+    gap: 32px; /* EspaÃ§o global menor */
+    max-width: 1200px; /* Largura mÃ¡xima do conteÃºdo */
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+/* =====================================
+   BADGE
+===================================== */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 24px; /* Mais padding lateral */
+    margin-bottom: 16px; /* Menor margem */
+    border-radius: 999px;
+    background: var(--accent); /* Ex: #E8F5E9 */
+    color: var(--primary-dark); /* Ex: #1B5E20 */
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* =====================================
+   TITLE
+===================================== */
+
+.hero h1 {
+    /* FONTE MENOR QUE O ATUAL */
+    font-size: clamp(2.5rem, 5vw, 3.5rem); 
+    line-height: 1.2;
+    letter-spacing: -1.5px; /* Menos agressivo */
+    font-weight: 700;
+    color: var(--text-primary); /* Garante cor escura */
+}
+
+/* Estiliza as tags HTML como texto cinza claro */
+.hero h1::before,
+.hero h1::after,
+.hero h1 span::before,
+.hero h1 span::after {
+    content: none; /* Remove qualquer tag visual */
+}
+
+.hero h1 span {
+    color: var(--primary); /* MantÃ©m o verde */
+}
+
+/* =====================================
+   DESCRIPTION
+===================================== */
+
+.hero p {
+    margin-top: 16px; /* Menor margem superior */
+    max-width: 700px; /* Um pouco mais largo */
+    font-size: 1.05rem; /* Fonte um pouco menor */
+    line-height: 1.7;
+    color: var(--text-secondary); /* Ex: #555 */
+    margin-inline: auto; /* Garante centralizaÃ§Ã£o */
+}
+
+/* Estiliza as tags HTML do parÃ¡grafo como texto cinza claro */
+.hero p::before,
+.hero p::after {
+    content: none;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botÃµes */
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+/* Removemos a animaÃ§Ã£o e sombra do hover para simplificar */
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-2px); /* Efeito mais sutil */
+    box-shadow: none; 
+}
+
+/* =====================================
+   HERO IMAGE
+===================================== */
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px; /* EspaÃ§o para o texto abaixo */
+}
+
+/* REMOVE OS CÃRCULOS DE FUNDO (Before e After) */
+.hero-image::before,
+.hero-image::after {
+    content: none;
+}
+
+/* Wrapper da imagem */
+.image-wrapper {
+    /* IMAGEM MUITO MENOR QUE A ATUAL */
+    width: 280px; 
+    height: 280px;
+    border-radius: 50%; /* MantÃ©m o formato circular */
+    overflow: hidden; /* Garante que a imagem fique dentro do cÃ­rculo */
+    border: 4px solid var(--primary); /* Adiciona a borda verde */
+    
+    /* REMOVE A ANIMAÃ‡ÃƒO DE FLUTUAR */
+    animation: none; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagem */
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o cÃ­rculo corretamente */
+    transition: transform 0.4s ease;
+}
+
+/* =====================================
+   THOUGHT PROCESS DIAGRAM (Novo)
+===================================== */
+
+.thought-process {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 64px;
+    padding: 24px;
+    border-top: 1px solid var(--border); /* Linha divisÃ³ria sutil */
+    width: 100%;
+    max-width: 800px;
+}
+
+.process-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+}
+
+.process-item i {
+    font-size: 2rem; /* Tamanho do Ã­cone */
+    color: var(--primary); /* Cor verde */
+}
+
+.process-item span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: lowercase; /* Como na imagem */
+}
+
+.process-arrow {
+    color: var(--border);
+    font-size: 1.2rem;
+}
+
+/* =====================================
+   RESPONSIVO
+===================================== */
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 120px;
+        gap: 24px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .image-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+
+    .thought-process {
+        flex-wrap: wrap; /* Quebra em telas pequenas */
+        gap: 16px;
+    }
+    
+    .process-arrow {
+        display: none; /* Esconde setas no mobile */
+    }
+}
