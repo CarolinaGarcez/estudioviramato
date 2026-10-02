@@ -1,4 +1,4 @@
-/* Minimal, cross-browser baseline. */
+/* Base mínima para os navegadores */
 *,
 *::before,
 *::after {
@@ -60,7 +60,7 @@ table {
     border-spacing: 0;
 }
 
-/* Keep a visible keyboard focus indicator unless a project style replaces it. */
+/* Mantém o foco visível na navegação por teclado */
 :focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 3px;
