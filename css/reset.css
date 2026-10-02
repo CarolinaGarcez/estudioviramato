@@ -1,13 +1,13 @@
-/* Base mínima para os navegadores */
+/* Reset básico */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body,
@@ -20,12 +20,12 @@ figure,
 blockquote,
 dl,
 dd {
-    margin: 0;
+  margin: 0;
 }
 
 ul[role="list"],
 ol[role="list"] {
-    list-style: none;
+  list-style: none;
 }
 
 img,
@@ -33,35 +33,35 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-/* Mantém o foco visível na navegação por teclado */
+/* Foco do teclado */
 :focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 3px;
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
 }

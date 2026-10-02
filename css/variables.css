@@ -1,15 +1,22 @@
 :root {
+  /* Cores */
   --color-background: #f5eddd;
   --color-paper: #fbf4e8;
   --color-text: #101b15;
   --color-primary: #08271c;
   --color-accent: #ef1688;
   --color-rule: rgb(16 27 21 / 24%);
+
+  /* Tipografia */
   --font-interface: 'Space Grotesk', sans-serif;
   --font-editorial: 'Young Serif', serif;
   --font-handwritten: 'Caveat', cursive;
+
+  /* Largura e respiro */
   --container-width: 96rem;
   --container-gutter: clamp(1.1rem, 4vw, 3.5rem);
+
+  /* Movimento */
   --transition-standard: 220ms ease;
   --hero-drift: 0px;
   --sprout-drift: 0px;

@@ -55,21 +55,6 @@
     revealItems.forEach((item) => observer.observe(item));
   }
 
-  const door = document.querySelector('.door-interaction');
-  const doorTrigger = door?.querySelector('.door-trigger');
-  const setDoorOpen = (open, returnFocus = false) => {
-    door?.classList.toggle('is-open', open);
-    doorTrigger?.setAttribute('aria-expanded', String(open));
-    if (returnFocus) doorTrigger?.focus();
-  };
-  if (door && doorTrigger) {
-    if (reducedMotion.matches) setDoorOpen(true);
-    doorTrigger.addEventListener('click', () => setDoorOpen(!door.classList.contains('is-open')));
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && door.classList.contains('is-open')) setDoorOpen(false, true);
-    });
-  }
-
   let ticking = false;
   const updateScroll = () => {
     const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
