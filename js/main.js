@@ -3,7 +3,7 @@
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#site-nav');
-  const mobileQuery = window.matchMedia('(max-width: 820px)');
+  const mobileQuery = window.matchMedia('(max-width: 1100px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const revealItems = [...document.querySelectorAll('[data-reveal]')];
   const closeMenu = (returnFocus = false) => {
