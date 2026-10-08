@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 46" role="img" aria-labelledby="title">
+  <title id="title">Representação da bandeira de Pernambuco</title>
+  <rect x="1.5" y="1.5" width="69" height="43" rx="0.8" fill="#f3efe3" stroke="#171713" stroke-width="1.5"/>
+  <path d="M2.2 2.2h67.6v28H2.2Z" fill="#25518d"/>
+  <path d="M20 27c3.5-9 12-14 16-14s12.5 5 16 14" fill="none" stroke="#e13a34" stroke-width="2"/>
+  <path d="M22 27c3.2-7.4 10.3-11.5 14-11.5S46.8 19.6 50 27" fill="none" stroke="#e0b72e" stroke-width="2"/>
+  <circle cx="36" cy="30.3" r="4" fill="#e0b72e"/>
+  <path d="M36 5.5v6M33 8.5h6" fill="none" stroke="#f3efe3" stroke-width="1.45"/>
+  <path d="m36 35 1.2 2.2 2.5.4-1.8 1.8.4 2.5-2.3-1.2-2.3 1.2.4-2.5-1.8-1.8 2.5-.4Z" fill="#b21f36"/>
+</svg>

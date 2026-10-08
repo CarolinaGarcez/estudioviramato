@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 46" role="img" aria-labelledby="title">
+  <title id="title">Bandeira do Japão</title>
+  <rect x="1.5" y="1.5" width="69" height="43" rx="0.8" fill="#f4efe1" stroke="#171713" stroke-width="1.5"/>
+  <circle cx="36" cy="23" r="10.5" fill="#b21f36"/>
+  <path d="M2.5 43.5c17-1 36 .8 67-1.2" fill="none" stroke="#171713" stroke-width=".55" opacity=".35"/>
+</svg>

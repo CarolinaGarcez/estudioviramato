@@ -15,3 +15,6 @@ Desktop.ini
 
 # Capturas locais de QA
 /qa-*.png
+
+# Script local de migração; não incluir no release
+migrate-projects.ps1

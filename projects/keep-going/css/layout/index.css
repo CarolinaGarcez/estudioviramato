@@ -1,0 +1,35 @@
+/* =========================================================
+   CONTAINER PRINCIPAL
+========================================================= */
+
+.container {
+
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:
+    20px
+    20px
+    40px;
+}
+
+.portfolio-navigation {
+  width: min(calc(100% - 40px), 650px);
+  margin: 0 auto;
+  padding-top: 12px;
+}
+
+.portfolio-navigation a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.portfolio-navigation a:focus-visible,
+.socialIcons a:focus-visible {
+  outline: 2px solid #00ffcc;
+  outline-offset: 4px;
+}

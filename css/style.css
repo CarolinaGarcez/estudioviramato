@@ -242,6 +242,17 @@ main {
   clip-path: polygon(0 0,100% 0,100% 94%,84% 97%,64% 94%,48% 100%,28% 96%,0 99%);
 }
 
+.hero-media-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-media-link:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: -8px;
+}
+
 .hero-media img {
   width: 100%;
   height: 100%;

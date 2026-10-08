@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 92" role="img" aria-labelledby="title">
+  <title id="title">Carimbo: dados não recomendados para fins científicos</title>
+  <g transform="rotate(-2 180 46)" fill="none" stroke="#8b2f26">
+    <rect x="5" y="5" width="350" height="82" rx="8" stroke-width="5"/>
+    <rect x="13" y="13" width="334" height="66" rx="4" stroke-width="1.5" opacity=".75"/>
+  </g>
+  <g fill="#8b2f26" font-family="'Arial Narrow',Arial,sans-serif" font-size="22" font-weight="800" letter-spacing="1.2" text-anchor="middle">
+    <text x="180" y="41">DADOS NÃO RECOMENDADOS</text>
+    <text x="180" y="68">PARA FINS CIENTÍFICOS</text>
+  </g>
+</svg>
