@@ -8,7 +8,7 @@
   --accent: #8b2f26;
   --border: #aaa69a;
 
-  --container-width: 72rem;
+  --container-width: 78rem;
   --gutter: clamp(1rem, 3vw, 2.5rem);
 
   --space-2xs: 0.25rem;
@@ -1295,11 +1295,11 @@ main .editorial-composition--lower {
     width: 42%;
   }
 
-  .breaking-news__collage-photo--archive {
-    left: 2%;
-    bottom: 1%;
-    width: 27%;
-  }
+.breaking-news__collage-photo--archive {
+  left: 2%;
+  bottom: 1%;
+  width: 27%;
+}
 }
 
 /* Ajuste de contenção para o masthead em telas muito estreitas. */
@@ -1311,7 +1311,7 @@ main .editorial-composition--lower {
 
 /* Refinos da seção Última Hora: mais presença, sem apertar a leitura. */
 @media (min-width: 48.01rem) {
-  main #breaking-news .breaking-news__inner { padding-bottom: clamp(3rem, 5vw, 5rem); }
+  main #breaking-news .breaking-news__inner { padding-bottom: clamp(1.75rem, 3vw, 2.75rem); }
   main #breaking-news .breaking-news__visual { min-height: auto; }
   main #breaking-news .breaking-news__stamp { width: clamp(11rem, 16vw, 14rem); margin-bottom: clamp(1.25rem, 2vw, 2.25rem); }
   main #breaking-news .breaking-news__disco-ball { width: clamp(7rem, 10vw, 9rem); top: 0; right: 4%; }
@@ -2178,6 +2178,30 @@ main > section,
 .masthead__inner {
   display: grid;
   gap: var(--space-sm);
+}
+
+.portfolio-return {
+  width: min(100% - (2 * var(--gutter)), var(--container-width));
+  margin-inline: auto;
+  padding-block: var(--space-xs);
+}
+
+.portfolio-return a {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: color 140ms ease, text-underline-offset 140ms ease;
+}
+
+.portfolio-return a:hover,
+.portfolio-return a:focus-visible {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
 }
 
 .masthead__topline {
@@ -7274,7 +7298,7 @@ main #breaking-news .breaking-news__visual .sheep-cameo--dancing {
 
   main > .editorial-composition--opening > #dossier,
   main > .editorial-composition--lower > #classifieds {
-    margin-top: clamp(4rem, 8vw, 8rem);
+    margin-top: clamp(2rem, 4vw, 3rem);
   }
 
   main > .editorial-composition--lower > #sports {
@@ -7387,7 +7411,7 @@ main #breaking-news .breaking-news__visual .sheep-cameo--dancing {
 
   main > .editorial-composition--opening > #dossier,
   main > .editorial-composition--lower > #classifieds {
-    margin-top: var(--space-2xl);
+    margin-top: var(--space-lg);
   }
 
   main #dossier .dossier__records,
@@ -7488,5 +7512,158 @@ main #breaking-news .breaking-news__visual .sheep-cameo--dancing {
     left: 2%;
     bottom: 1%;
     width: 27%;
+  }
+}
+
+/* Ajustes de ritmo: reduzem áreas vazias sem alterar a escala dos elementos. */
+.portfolio-return {
+  box-sizing: border-box;
+  width: min(100% - (2 * var(--space-md)), 84rem);
+}
+
+.portfolio-return a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+}
+
+@media (min-width: 48.01rem) {
+  main > .editorial-composition--opening,
+  main > .editorial-composition--lower,
+  main > section > .editorial-container,
+  main > section > .editorial-composition {
+    width: min(100% - (2 * var(--gutter)), 80rem);
+  }
+
+  main > .editorial-composition--opening > #dossier {
+    margin-top: clamp(1.25rem, 2.5vw, 2rem);
+  }
+
+  main #breaking-news .breaking-news__inner {
+    padding-bottom: clamp(1rem, 2vw, 1.5rem);
+    padding-top: clamp(1.75rem, 3.5vw, 3rem);
+  }
+
+  main #dossier .dossier__inner {
+    padding-block: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  main #photo-archive .photo-archive__inner,
+  main #sports .sports__inner {
+    padding-block: clamp(1.5rem, 3vw, 2.75rem);
+  }
+
+  main #classifieds .classifieds__inner,
+  main #inss-history .inss-history__inner {
+    padding-block: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  main #photo-archive .archive-carousel__figure {
+    padding-block: clamp(1.25rem, 2.5vw, 2rem) clamp(1rem, 2vw, 1.5rem);
+  }
+
+  main #sports .sports__header {
+    min-height: 0;
+  }
+
+  main #sports .sports__lead {
+    padding-bottom: clamp(2.5rem, 4vw, 3.5rem);
+  }
+
+  main #sports .sports__illustrations {
+    min-height: clamp(6.75rem, 8vw, 7.25rem);
+    margin-top: calc(-1 * clamp(1.5rem, 3vw, 2.5rem));
+    padding-top: clamp(1rem, 2vw, 1.75rem);
+  }
+
+  main #sports {
+    padding-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  main > .editorial-composition--lower > #sports {
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  main #inss-history {
+    padding-block: clamp(1rem, 2vw, 1.25rem);
+  }
+
+  main #inss-history .inss-history__milestone {
+    padding-block: clamp(1.25rem, 2vw, 1.75rem);
+  }
+
+  main #inss-history .inss-history__article {
+    padding-top: clamp(1rem, 2vw, 1.75rem);
+  }
+
+  main #classifieds {
+    padding-top: clamp(1rem, 2vw, 1.25rem);
+  }
+
+  main > .editorial-composition--lower > #classifieds {
+    margin-top: clamp(1rem, 2vw, 1.25rem);
+  }
+
+  main #editorial .editorial__inner {
+    padding-top: clamp(1.5rem, 3vw, 2.5rem) !important;
+    padding-bottom: clamp(1.5rem, 3vw, 2.5rem) !important;
+  }
+
+  main #editorial .editorial-article__closing {
+    margin-top: clamp(1.75rem, 3.5vw, 3rem);
+  }
+
+  main #dossier .dossier__found-photos {
+    min-height: clamp(20rem, 22vw, 22rem) !important;
+    margin-top: clamp(0.75rem, 1.5vw, 1.25rem) !important;
+  }
+}
+
+@media (max-width: 48rem) {
+  main #photo-archive .photo-archive__inner {
+    padding-block: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  main #sports .sports__lead {
+    padding-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  main #sports {
+    padding-bottom: var(--space-md);
+  }
+
+  main > .editorial-composition--lower > #sports {
+    margin-bottom: var(--space-md);
+  }
+
+  main #inss-history,
+  main #classifieds {
+    padding-block: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  main #classifieds .classifieds__inner {
+    padding-block: var(--space-md);
+  }
+
+  main > .editorial-composition--lower > #classifieds {
+    margin-top: var(--space-md);
+  }
+
+  main #dossier .dossier__found-photos {
+    min-height: 15rem !important;
+    margin-top: var(--space-md) !important;
+  }
+
+  main #editorial .editorial__inner {
+    padding-top: clamp(1.5rem, 5vw, 2rem) !important;
+    padding-bottom: clamp(1.5rem, 5vw, 2rem) !important;
+  }
+
+  main #editorial .editorial-article__closing {
+    margin-top: var(--space-xl);
+  }
+
+  .portfolio-return {
+    width: min(100% - (2 * var(--gutter)), 76rem);
   }
 }
