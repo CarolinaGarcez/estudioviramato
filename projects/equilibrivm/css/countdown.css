@@ -15,7 +15,7 @@
    ========================================== */
 .countdown-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.45em;
   color: #8b5cf6; /* Roxo lilás da identidade */
@@ -26,7 +26,7 @@
 
 .event-info {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.25em;
   color: rgba(255, 255, 255, 0.8);
@@ -64,7 +64,7 @@
 }
 
 .group-label {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   color: rgba(255, 255, 255, 0.35);

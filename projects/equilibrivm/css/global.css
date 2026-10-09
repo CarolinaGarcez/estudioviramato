@@ -57,7 +57,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url('../img/album.png');
+  background-image: url('../img/album-optimized.jpg');
   background-size: cover;
   background-position: center;
   /* Capa desfocada e com brilho calibrado para excelente contraste */

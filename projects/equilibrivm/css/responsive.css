@@ -30,6 +30,20 @@
     font-size: 0.78rem;
     margin-bottom: 8px;
   }
+
+  .retrospective-note {
+    max-width: 300px;
+    font-size: 0.7rem;
+  }
+
+  .experience-controls {
+    gap: 2px 8px;
+  }
+
+  .experience-control {
+    padding-inline: 10px;
+    font-size: 0.75rem;
+  }
   .countdown-title {
     margin-bottom: 8px;
   }
@@ -140,4 +154,37 @@
   .footerBottom img {
     width: 115px;
   }
+}
+
+/* Amplia a leitura em desktop baixo sem reaplicar a escala mobile. */
+@media (max-height: 720px) and (min-width: 601px) {
+  .vinyl-container {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 10px;
+  }
+
+  .hero-title { font-size: 2.5rem; margin-top: 6px; }
+  .hero-tag { font-size: 0.75rem; margin-bottom: 6px; }
+  .hero-description { font-size: 1rem; margin-bottom: 12px; }
+  .retrospective-note { font-size: 0.8125rem; margin-bottom: 8px; }
+  .experience-control { font-size: 0.875rem; }
+  .countdown-title { font-size: 0.75rem; }
+  .event-info { font-size: 0.875rem; padding-top: 14px; }
+}
+
+/* Escala fluida preserva espaço e leitura nas telas estreitas. */
+@media (max-width: 600px) {
+  .vinyl-container {
+    width: clamp(160px, 46vw, 190px);
+    height: clamp(160px, 46vw, 190px);
+  }
+
+  .hero-title { font-size: clamp(1.9rem, 7.4vw, 2rem); }
+  .hero-tag,
+  .countdown-title { font-size: 0.75rem; }
+  .hero-description { font-size: 0.875rem; max-width: 340px; line-height: 1.5; }
+  .retrospective-note { max-width: 320px; font-size: 0.75rem; }
+  .experience-control { font-size: 0.875rem; }
+  .event-info { font-size: 0.8125rem; }
 }

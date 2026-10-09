@@ -4,9 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Equilibrivm Experience — Projeto interativo</title>
-  <meta name="description" content="Uma experiência interativa inspirada na dualidade emocional do álbum Equilibrivm.">
-  <!-- Quando houver URL pública: canonical, og:url, og:image absoluta e metadados Twitter/X. -->
+  <title>Equilibrivm Experience — Da espera à memória</title>
+  <meta name="description" content="Uma experiência interativa que registra a expectativa pelo show Equilibrivm em São Paulo, em 08 de agosto de 2026.">
+  <link rel="canonical" href="https://carolinagarcez.github.io/estudioviramato/projects/equilibrivm/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Equilibrivm Experience — Da espera à memória">
+  <meta property="og:description" content="Uma experiência interativa que registra a expectativa pelo show Equilibrivm em São Paulo, em 08 de agosto de 2026.">
+  <meta property="og:url" content="https://carolinagarcez.github.io/estudioviramato/projects/equilibrivm/">
+  <meta property="og:image" content="https://carolinagarcez.github.io/estudioviramato/projects/equilibrivm/img/album-optimized.jpg">
+  <meta property="og:image:alt" content="Capa do álbum usada como parte da identidade visual do Equilibrivm Experience">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Equilibrivm Experience — Da espera à memória">
+  <meta name="twitter:description" content="Uma experiência interativa que registra a expectativa pelo show Equilibrivm em São Paulo, em 08 de agosto de 2026.">
+  <meta name="twitter:image" content="https://carolinagarcez.github.io/estudioviramato/projects/equilibrivm/img/album-optimized.jpg">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
   <!-- Google Fonts -->
@@ -54,19 +65,19 @@
 
       <!-- Descrição  -->
       <p class="hero-description">
-        Transformando minha ansiedade em projeto.
-        <br><br>
-        Uma experiência interativa baseada na dualidade emocional do álbum.
+        A espera virou memória.<br>
+        Esta experiência nasceu da expectativa pelo show Equilibrivm em São Paulo.
       </p>
 
       <!-- Texto Superior do Contador -->
-      <span class="countdown-title" id="countdown-title">EXPERIÊNCIA REALIZADA</span>
+      <span class="countdown-title" id="countdown-title">EVENTO REALIZADO</span>
 
       <!-- Contagem Regressiva Flip -->
-      <div class="countdown-container" aria-hidden="true" hidden>
+      <div class="countdown-container" id="countdown-container" role="group" aria-labelledby="countdown-title" aria-live="off" hidden>
+        <span class="sr-only" id="countdown-readable"></span>
 
         <!-- Grupo: Dias -->
-        <div class="countdown-group">
+        <div class="countdown-group" aria-hidden="true">
           <div class="digit-pair" id="days-pair">
             <div class="flip-card" id="days-tens">
               <div class="card-face top"><span class="digit-num">0</span></div>
@@ -81,7 +92,7 @@
         </div>
 
         <!-- Grupo: Horas -->
-        <div class="countdown-group">
+        <div class="countdown-group" aria-hidden="true">
           <div class="digit-pair" id="hours-pair">
             <div class="flip-card" id="hours-tens">
               <div class="card-face top"><span class="digit-num">0</span></div>
@@ -96,7 +107,7 @@
         </div>
 
         <!-- Grupo: Minutos -->
-        <div class="countdown-group">
+        <div class="countdown-group" aria-hidden="true">
           <div class="digit-pair" id="minutes-pair">
             <div class="flip-card" id="minutes-tens">
               <div class="card-face top"><span class="digit-num">0</span></div>
@@ -111,7 +122,7 @@
         </div>
 
         <!-- Grupo: Segundos -->
-        <div class="countdown-group">
+        <div class="countdown-group" aria-hidden="true">
           <div class="digit-pair" id="seconds-pair">
             <div class="flip-card" id="seconds-tens">
               <div class="card-face top"><span class="digit-num">0</span></div>
@@ -126,6 +137,14 @@
         </div>
 
       </div>
+
+      <p class="retrospective-note" id="retrospective-note" hidden></p>
+
+      <div class="experience-controls" role="group" aria-label="Controles da experiência">
+        <button class="experience-control" id="retrospective-toggle" type="button" hidden>Reviver a espera</button>
+        <button class="experience-control experience-control--secondary" id="archive-open" type="button" hidden>Ver como era</button>
+      </div>
+      <p class="sr-only" id="experience-status" role="status" aria-live="polite" aria-atomic="true"></p>
 
       <!-- Dia do Show -->
       <span class="event-info">08.08.2026 • SÃO PAULO</span>
@@ -146,7 +165,7 @@
       <a href="https://www.instagram.com/mariacarolina.g.a/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Carolina Garcez">
         <i class="fa-brands fa-instagram"></i>
       </a>
-      <a href="https://carolinagarcez.github.io/portfolio/" target="_blank" rel="noopener noreferrer" aria-label="Portfólio de Carolina Garcez">
+      <a href="https://carolinagarcez.github.io/estudioviramato/" target="_blank" rel="noopener noreferrer" aria-label="Vira Mato — Estúdio Criativo">
         <i class="fa-solid fa-laptop-code"></i>
       </a>
     </div>

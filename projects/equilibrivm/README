@@ -1,44 +1,25 @@
-# 🎧 Equilibrivm Experience
+# Equilibrivm Experience — Da espera à memória
 
-Uma experiência digital inspirada na expectativa pela chegada da turnê Equilibrivm.
+Uma experiência digital criada como estudo pessoal de Front-End para transformar a ansiedade e a expectativa pela chegada da turnê Equilibrivm em uma recordação interativa.
 
-O projeto foi desenvolvido como estudo de Front-End utilizando HTML, CSS e JavaScript, com o objetivo de transformar a contagem do tempo até o show em uma experiência visual interativa.
+O show em São Paulo aconteceu em **8 de agosto de 2026**. A contagem regressiva em tempo real foi encerrada; a página agora preserva a experiência original da espera e oferece uma retrospectiva ilustrativa.
 
-## ✨ Funcionalidades atuais
+## Experiência atual
 
-* Contagem regressiva em tempo real para o show de SP do dia 08 de agosto de 2026
-* Interface inspirada no universo musical
-* Animações suaves com CSS
-* Layout responsivo para diferentes dispositivos
-* Estrutura modular de CSS e JavaScript
+- O estado inicial identifica o evento como realizado e apresenta a frase “A espera virou memória”.
+- O disco de vinil continua girando e pode ser pausado ou retomado pelo botão central.
+- “Reviver a espera” executa por cerca de 13 segundos uma simulação acelerada do contador original. Os valores são ilustrativos: não indicam o tempo real esperado nem uma data histórica de início. A simulação pode ser interrompida ou repetida.
+- Com a preferência por movimento reduzido, a retrospectiva aparece sem animação acelerada.
 
-## 🎯 Objetivo do Projeto
 
-Mais do que exibir uma data, a proposta é representar visualmente minha expectativa e a ansiedade aguardando a chegada do dia do show.
 
-Esta versão do projeto utiliza uma experiência minimalista, combinando elementos visuais inspirados em plataformas de música com uma contagem regressiva dinâmica para o show em São Paulo.
+## Tecnologias e aprendizado
 
-## 💻 Tecnologias
+- HTML5 semântico, CSS3 modular e JavaScript nativo em módulos.
+- Organização de componentes e estados de interface.
+- Manipulação do DOM, animações CSS e preferências de acessibilidade.
+- Layout responsivo e suporte a teclado.
 
-* HTML5
-* CSS3
-* JavaScript
-* Git
-* GitHub
+## Contexto
 
-## 📚 Objetivo de Aprendizado
-
-Este projeto faz parte dos meus estudos em desenvolvimento Front-End e foi criado para praticar:
-
-* Estruturação de interfaces
-* Organização modular de código
-* Animações com CSS
-* Manipulação do DOM com JavaScript
-* Responsividade
-* Boas práticas de desenvolvimento
-
-## 📌 Observação
-
-Este projeto é uma homenagem visual inspirada na expectativa pela turnê Equilibrivm.
-
-Não possui vínculo oficial com a artista ou sua equipe e não possui fins comerciais.
+Este é um projeto pessoal, independente, não oficial e sem fins comerciais. É uma homenagem visual inspirada na expectativa pelo evento; não possui vínculo com a artista ou sua equipe.

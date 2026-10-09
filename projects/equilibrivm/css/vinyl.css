@@ -15,9 +15,9 @@
    ========================================== */
 .vinyl-container {
   position: relative;
-  width: 270px; /* Largura proeminente para destaque como elemento central */
-  height: 270px;
-  margin-bottom: 15px;
+  width: clamp(280px, 22vw, 320px);
+  height: clamp(280px, 22vw, 320px);
+  margin-bottom: 18px;
 }
 
 .vinyl-glow {
@@ -87,7 +87,7 @@
   width: 42%;
   height: 42%;
   border-radius: 50%;
-  background-image: url('../img/album.png');
+  background-image: url('../img/album-optimized.jpg');
   background-size: cover;
   background-position: center;
   border: 2.5px solid #111;

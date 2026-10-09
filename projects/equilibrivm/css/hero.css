@@ -15,7 +15,7 @@
    ========================================== */
 .experience-container {
   width: 100%;
-  max-width: 800px;
+  max-width: 960px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +51,7 @@
   min-height: 44px;
   align-items: center;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   text-decoration: none;
 }
 
@@ -68,36 +68,181 @@
    ========================================== */
 .hero-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 2.4rem; /* Reduzido de 2.8rem para liberar altura no layout 100vh */
+  font-size: 2.75rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   color: #ffffff;
   text-transform: uppercase;
-  margin-top: 6px;
+  margin-top: 8px;
   margin-bottom: 0;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-tag {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.35em;
   color: rgba(255, 255, 255, 0.45);
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   display: inline-block;
 }
 
 .hero-description {
   font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
+  font-size: 1.0625rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.6);
-  max-width: 420px;
-  margin: 0 auto 12px auto;
+  max-width: 560px;
+  margin: 0 auto 16px auto;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.retrospective-note {
+  max-width: 560px;
+  margin: 0 auto 12px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.875rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.experience-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 14px;
+  margin: 8px auto 0;
+}
+
+.experience-control {
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid rgba(196, 181, 253, 0.38);
+  border-radius: 999px;
+  background: rgba(3, 3, 3, 0.26);
+  color: rgba(255, 255, 255, 0.82);
+  font: 500 0.9rem/1.35 'Inter', sans-serif;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.experience-control:hover {
+  border-color: rgba(196, 181, 253, 0.8);
+  color: #fff;
+  background: rgba(139, 92, 246, 0.12);
+}
+
+.experience-control:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 4px;
+}
+
+.experience-control--secondary {
+  border-color: transparent;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: underline;
+  text-decoration-color: rgba(196, 181, 253, 0.45);
+  text-underline-offset: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.archive-dialog {
+  width: min(720px, calc(100% - 24px));
+  max-width: none;
+  max-height: min(88vh, 900px);
+  margin: auto;
+  padding: clamp(18px, 4vw, 30px);
+  overflow: auto;
+  border: 1px solid rgba(196, 181, 253, 0.28);
+  border-radius: 14px;
+  background: #100f15;
+  color: #fff;
+}
+
+.archive-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(4px);
+}
+
+.archive-dialog__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.archive-dialog__title {
+  color: #d8ccff;
+  font: 600 1rem/1.35 'Outfit', sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.archive-dialog__close {
+  flex: 0 0 auto;
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.archive-dialog__close:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+}
+
+.archive-dialog__intro {
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.archive-dialog__figure {
+  margin: 0;
+}
+
+.archive-dialog__figure + .archive-dialog__figure {
+  margin-top: 20px;
+}
+
+.archive-dialog__image {
+  display: block;
+  width: 100%;
+  max-height: 68vh;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 8px;
+  background: #050505;
+}
+
+.archive-dialog__caption {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  text-align: center;
 }
 
 /* ==========================================
@@ -149,7 +294,8 @@
 }
 
 .footerBottom p {
-  font-size: 0.62rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
   color: rgba(255, 255, 255, 0.35);
   letter-spacing: 0.05em;
 }

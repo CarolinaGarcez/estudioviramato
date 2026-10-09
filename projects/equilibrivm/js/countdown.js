@@ -1,20 +1,10 @@
-/**
- * Arquivo: js/countdown.js
- * Finalidade: Módulo da contagem regressiva e controle do relógio flip.
- * Responsabilidade:
- *   - Calcular a diferença de tempo em relação a 08/08/2026.
- *   - Gerenciar as atualizações de dígitos individuais por meio de transições 3D (flip).
- *   - Evitar acúmulo de animações na DOM caso a aba do navegador seja minimizada.
- * Métodos exportados:
- *   - initCountdown(): Inicializa o relógio no carregamento e configura o loop de 1 segundo.
- * Relação com outros módulos:
- *   - Inicializado pelo módulo principal js/main.js.
- */
+/** Retrospectiva acelerada e ilustrativa do contador que existia antes do evento. */
 
-// Data de destino do show (08 de Agosto de 2026 às 12:00:00 em São Paulo)
-const eventDate = new Date("2026-08-08T12:00:00");
+// Retrospectiva curta; os valores não representam uma data histórica real.
+const SIMULATION_DURATION_MS = 13000;
+const SIMULATION_START_SECONDS = (10 * 24 * 60 * 60) + (14 * 60 * 60) + (32 * 60) + 18;
 
-// Flag de controle para evitar animação flip imediata no carregamento da página
+// Evita animar dígitos na primeira apresentação da retrospectiva.
 let isInitialLoad = true;
 
 /**
@@ -96,70 +86,127 @@ function updateCard(cardId, newValue) {
   }
 }
 
-/**
- * Calcula a diferença de tempo e atualiza os cartões correspondentes
- */
-function updateCountdown() {
-  const now = new Date().getTime();
-  const distance = eventDate.getTime() - now;
+function renderCountdown(totalSeconds) {
+  const safeSeconds = Math.max(0, Math.floor(totalSeconds));
+  const days = Math.floor(safeSeconds / 86400);
+  const hours = Math.floor((safeSeconds % 86400) / 3600);
+  const minutes = Math.floor((safeSeconds % 3600) / 60);
+  const seconds = safeSeconds % 60;
+  const values = [days, hours, minutes, seconds].map(value => String(value).padStart(2, '0'));
+  const ids = [
+    ['days-tens', 'days-ones'],
+    ['hours-tens', 'hours-ones'],
+    ['minutes-tens', 'minutes-ones'],
+    ['seconds-tens', 'seconds-ones']
+  ];
 
-  const title = document.getElementById('countdown-title');
-  const countdown = document.querySelector('.countdown-container');
+  values.forEach((value, index) => {
+    updateCard(ids[index][0], value[0]);
+    updateCard(ids[index][1], value[1]);
+  });
 
-  if (distance <= 0) {
-    if (title) title.textContent = 'EXPERIÊNCIA REALIZADA';
-    if (countdown) countdown.hidden = true;
-    return false;
+  const readable = document.getElementById('countdown-readable');
+  if (readable) {
+    readable.textContent = `${days} ${days === 1 ? 'dia' : 'dias'}, ${hours} ${hours === 1 ? 'hora' : 'horas'}, ${minutes} ${minutes === 1 ? 'minuto' : 'minutos'} e ${seconds} ${seconds === 1 ? 'segundo' : 'segundos'}. Valores ilustrativos.`;
   }
 
-  if (title) title.textContent = 'FALTAM';
-  if (countdown) countdown.hidden = false;
-
-  let days = 0;
-  let hours = 0;
-  let minutes = 0;
-  let seconds = 0;
-
-  days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Converte os valores para string com dois caracteres (ex: 9 -> "09")
-  const daysStr = String(days).padStart(2, '0');
-  const hoursStr = String(hours).padStart(2, '0');
-  const minutesStr = String(minutes).padStart(2, '0');
-  const secondsStr = String(seconds).padStart(2, '0');
-
-  // Atualiza cada dígito individualmente (dezenas e unidades)
-  updateCard("days-tens", daysStr[0]);
-  updateCard("days-ones", daysStr[1]);
-
-  updateCard("hours-tens", hoursStr[0]);
-  updateCard("hours-ones", hoursStr[1]);
-
-  updateCard("minutes-tens", minutesStr[0]);
-  updateCard("minutes-ones", minutesStr[1]);
-
-  updateCard("seconds-tens", secondsStr[0]);
-  updateCard("seconds-ones", secondsStr[1]);
-
-  // Após a primeira execução da página, as próximas usarão o flip
-  if (isInitialLoad) {
-    isInitialLoad = false;
-  }
-
-  return true;
+  isInitialLoad = false;
 }
 
-/**
- * Inicializa a contagem regressiva
- */
 export function initCountdown() {
-  if (!updateCountdown()) return;
+  const title = document.getElementById('countdown-title');
+  const countdown = document.getElementById('countdown-container');
+  const note = document.getElementById('retrospective-note');
+  const toggle = document.getElementById('retrospective-toggle');
+  const status = document.getElementById('experience-status');
+  if (!title || !countdown || !toggle) return;
 
-  // Para o relógio ao encerrar o evento, mantendo a experiência pronta para outra data.
-  const intervalId = setInterval(() => {
-    if (!updateCountdown()) clearInterval(intervalId);
-  }, 1000);
+  let intervalId = null;
+  let completionTimeout = null;
+  let isRunning = false;
+  let isStaticView = false;
+
+  const returnToMemory = (announcement = '') => {
+    clearInterval(intervalId);
+    clearTimeout(completionTimeout);
+    intervalId = null;
+    completionTimeout = null;
+    isRunning = false;
+    isStaticView = false;
+    countdown.hidden = true;
+    if (note) note.hidden = true;
+    title.textContent = 'EVENTO REALIZADO';
+    toggle.textContent = 'Reviver a espera';
+    if (announcement && status) status.textContent = announcement;
+  };
+
+  const finishSimulation = () => {
+    isRunning = false;
+    intervalId = null;
+    renderCountdown(0);
+    toggle.textContent = 'Reviver novamente';
+    if (status) status.textContent = 'Retrospectiva concluída. A espera virou memória.';
+    completionTimeout = setTimeout(() => returnToMemory(), 750);
+  };
+
+  const startSimulation = () => {
+    clearTimeout(completionTimeout);
+    isStaticView = false;
+    countdown.hidden = false;
+    if (note) {
+      note.textContent = 'Simulação acelerada; os valores são ilustrativos e não representam uma data histórica.';
+      note.hidden = false;
+    }
+    title.textContent = 'RETROSPECTIVA SIMULADA';
+    toggle.textContent = 'Interromper retrospectiva';
+    isRunning = true;
+    if (status) status.textContent = 'Retrospectiva simulada iniciada. O contador será acelerado por cerca de 13 segundos.';
+
+    const startedAt = performance.now();
+    renderCountdown(SIMULATION_START_SECONDS);
+    intervalId = setInterval(() => {
+      const elapsed = performance.now() - startedAt;
+      if (elapsed >= SIMULATION_DURATION_MS) {
+        clearInterval(intervalId);
+        finishSimulation();
+        return;
+      }
+
+      const remaining = Math.ceil(SIMULATION_START_SECONDS * (1 - (elapsed / SIMULATION_DURATION_MS)));
+      renderCountdown(remaining);
+    }, 650);
+  };
+
+  const showReducedMotionVersion = () => {
+    isStaticView = true;
+    countdown.hidden = false;
+    if (note) {
+      note.textContent = 'Versão estática da retrospectiva: valores ilustrativos, sem animação acelerada.';
+      note.hidden = false;
+    }
+    title.textContent = 'RETROSPECTIVA SIMULADA · SEM ANIMAÇÃO';
+    toggle.textContent = 'Voltar à memória';
+    renderCountdown(SIMULATION_START_SECONDS);
+    if (status) status.textContent = 'Retrospectiva estática exibida conforme sua preferência por movimento reduzido.';
+  };
+
+  toggle.hidden = false;
+  toggle.addEventListener('click', () => {
+    if (isRunning) {
+      returnToMemory('Retrospectiva interrompida. Estado de memória restaurado.');
+      return;
+    }
+
+    if (isStaticView) {
+      returnToMemory('Estado de memória restaurado.');
+      return;
+    }
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      showReducedMotionVersion();
+      return;
+    }
+
+    startSimulation();
+  });
 }
