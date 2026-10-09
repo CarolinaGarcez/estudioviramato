@@ -1,49 +1,50 @@
-🌈 keep.going() — Motivação Aleatória
-✨ Sobre o projeto
+# keep.going() — pausa motivacional
 
-Uma pequena pausa digital para te lembrar de continuar.
+Uma pequena pausa digital para respirar e continuar. A experiência combina humor leve, mensagens motivacionais e status rotativos em uma interface escura com brilho verde e azulado.
 
-O keep.going() é um projeto simples e interativo que gera frases motivacionais e imagens aleatórias a cada clique, trazendo leveza e inspiração para o dia a dia.
+## Experiência
 
-🧠 Funcionalidades
-Geração de frases motivacionais aleatórias
-Troca de imagens dinâmica
-Interface simples e responsiva
-Estrutura organizada em arquivos separados
-Código limpo e fácil de entender
+- O botão **Respire** seleciona uma frase aleatória e a apresenta em um cartão.
+- As frases estão organizadas em quatro categorias: impulso, realidade, concentração e recomeço.
+- A linha de status alterna entre mensagens curtas a cada três segundos.
 
-⚙️ Como funciona
+A interface não troca imagens durante a interação. `data-img.js` e as imagens em `img/vibe/` permanecem no projeto como material inativo, não utilizado pela versão atual.
 
-O projeto segue uma arquitetura simples:
+## Tecnologias
 
-data-frases.js → contém todas as frases
-data-img.js → contém os caminhos das imagens
-result.js → contém a lógica que escolhe aleatoriamente os dados
-script.js → scripts de alerta e ações gerais
+- HTML semântico
+- CSS modular, com layout responsivo e suporte a movimento reduzido
+- JavaScript modular com módulos ES
+- Google Fonts e Font Awesome via CDN
 
-🛠️ Tecnologias usadas
-HTML5
-CSS3
-JavaScript
+## Estrutura
 
-💡 Aprendizados
-Esse projeto foi desenvolvido para praticar:
+- `index.html`: conteúdo, controles e metadados da página
+- `css/`: estilos base, layout, componentes e regras responsivas
+- `js/main.js`: ponto de entrada que inicializa os módulos
+- `js/result.js`: seleção e exibição das frases
+- `js/data/data-frases.js`: categorias e mensagens
+- `js/data/data-status.js`: mensagens do status
+- `js/components/status.js`: seleção do elemento de status
+- `js/effects/status-effect.js`: rotação das mensagens de status
+- `js/data/data-img.js`: caminhos de imagens não utilizados atualmente
 
-Manipulação do DOM
-Arrays e lógica aleatória
-Separação de responsabilidades no código
-✨ Autora
+## Como executar localmente
 
-Feito com 💙 por Carol
-Projeto de estudo e evolução em desenvolvimento front-end.
+Como o projeto usa módulos JavaScript, abra-o por um servidor HTTP local, não diretamente como arquivo `file://`. Uma opção é abrir `projects/keep-going/` no VS Code e iniciar um servidor com a extensão Live Server; depois acesse o endereço local exibido pela extensão.
 
-📬 Contato
-LinkedIn: https://www.linkedin.com/in/carolinagarcez
-GitHub: https://github.com/CarolinaGarcez
-Instagram: https://www.instagram.com/mariacarolina.g.a/
-Portfólio: https://carolinagarcez.github.io/portfolio/
+## Objetivos de aprendizado
 
-💭 detalhe importante
-O nome keep.going() foi pensado como um lembrete simples:
+- Manipular o DOM e atualizar conteúdo de forma acessível
+- Selecionar dados aleatórios a partir de categorias
+- Separar dados, efeitos e responsabilidades em módulos
+- Praticar layout responsivo, foco visível e preferência por movimento reduzido
 
-mesmo em dias difíceis, continua.
+## Autoria e contato
+
+Projeto autoral de Carolina Garcez, desenvolvido como estudo de Front-End.
+
+- LinkedIn: https://www.linkedin.com/in/carolinagarcez
+- GitHub: https://github.com/CarolinaGarcez
+- Instagram: https://www.instagram.com/mariacarolina.g.a/
+- Vira Mato — Estúdio Criativo: https://carolinagarcez.github.io/estudioviramato/
